@@ -11,7 +11,7 @@ services:
       CATALINA_OPTS: >-
         -Xmx512M
     volumes:
-      - ./configs/print-apps:/usr/local/tomcat/webapps/ROOT/print-apps:ro
+      - ./print-apps:/usr/local/tomcat/webapps/ROOT/print-apps:ro
     ports:
       - 8680:8080
 

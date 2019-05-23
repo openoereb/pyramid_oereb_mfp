@@ -7,7 +7,7 @@ the `pyramid_oereb server <https://github.com/openoereb/pyramid_oereb>`__
 with `MapFish-Print <https://github.com/mapfish/mapfish-print>`__.
 
 This subproject was created consequently of
-<https://github.com/openoereb/pyramid_oereb/issues/459>`__.
+`Issue 459 <https://github.com/openoereb/pyramid_oereb/issues/459>`__.
 
 To run a local instance of mapfish-print with the oereb templates, do:
 
