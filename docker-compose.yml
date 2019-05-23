@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  print:
+    networks:
+    - print-network
+    image: camptocamp/mapfish_print:3.20
+    environment:
+      LOG_LEVEL: DEBUG
+      CATALINA_OPTS: >-
+        -Xmx512M
+    volumes:
+      - ./configs/print-apps:/usr/local/tomcat/webapps/ROOT/print-apps:ro
+    ports:
+      - 8680:8080
+
+networks:
+  print-network:
+    external: true
