@@ -19,3 +19,6 @@ this before, you need to declare the ``print-network`` for docker,
 so that your local ``pyramid_oereb`` docker container can access
 your local ``print`` container, as follows: 
 ``sudo docker network create print-network``
+
+Access the history of the templates by using the `openoereb/pyramid_oereb commit <https://github.com/openoereb/pyramid_oereb/commit/352970f3504385a462797dab7de30fd00896b922>`__
+which deleted the templates there as a starting point.
