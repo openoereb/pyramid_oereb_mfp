@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2019-05-28T14:03:04 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="topiclegend" pageWidth="299" pageHeight="20" columnWidth="273" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6477891d-f5c5-456f-a115-e91b2a2768c6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8.5"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="OfficeAtWeb" class="java.lang.String"/>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="300" height="15" isRemoveLineWhenBlank="true" uuid="083811f5-8641-45e8-84c7-ed0819bc3237">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
+				<reportElement x="0" y="15" width="300" height="4" forecolor="#4C8FBA" uuid="43b94d8c-f86f-417d-83ec-78e70dcb55f8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Cadastra" size="6"/>
+					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb}== null) ? null : $F{OfficeAtWeb}]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA[($F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb} == null) ? null : $F{OfficeAtWeb}]]></hyperlinkReferenceExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

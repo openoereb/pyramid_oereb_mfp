@@ -196,6 +196,11 @@ templates:
                     Laws: !datasource
                         default: []
                         attributes: *lpra
+                    ResponsibleOffice: !datasource
+                        default: []
+                        attributes:
+                            Name: !string {}
+                            OfficeAtWeb: !string {}
             ExclusionOfLiability: !datasource
                 default: []
                 attributes:
@@ -362,6 +367,12 @@ templates:
                     Laws: datasource
                 outputMapper:
                     jrDataSource: LawsDataSource
+            - !createDataSource
+                processors: []
+                inputMapper:
+                    ResponsibleOffice: datasource
+                outputMapper:
+                    jrDataSource: ResponsibleOfficeDataSource
             - !addOverlayLayers
                 inputMapper:
                     overlayLayers: staticLayers
