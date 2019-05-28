@@ -55,6 +55,13 @@
 		<field name="Title" class="java.lang.String"/>
 		<field name="TextAtWeb" class="java.lang.String"/>
 	</subDataset>
+	<subDataset name="ResponsibleOfficeDataSource" uuid="9afae2eb-c0ac-49d8-b3c8-b03abc22c889">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="Name" class="java.lang.String"/>
+		<field name="OfficeAtWeb" class="java.lang.String"/>
+	</subDataset>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
@@ -90,6 +97,7 @@
 	<field name="OtherLegendDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="HintsDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="LawsDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<field name="ResponsibleOfficeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<variable name="V_CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Page" calculation="Sum">
 		<variableExpression><![CDATA[1]]></variableExpression>
 		<initialValueExpression><![CDATA[$V{PAGE_NUMBER}]]></initialValueExpression>
@@ -487,27 +495,16 @@
 			<break>
 				<reportElement x="0" y="33" width="100" height="1" uuid="e023618f-72b3-415a-8aab-40fe57b52099"/>
 			</break>
-			<textField>
-				<reportElement mode="Transparent" x="193" y="0" width="300" height="15" isRemoveLineWhenBlank="true" uuid="cbbf44b1-012f-447d-a4ab-e2c67289add6">
+			<subreport>
+				<reportElement mode="Transparent" x="193" y="3" width="300" height="19" isRemoveLineWhenBlank="true" uuid="1d3ac1d8-7b5e-4caa-bcc0-cf857dddc651">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ResponsibleOffice_Name}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
-				<reportElement x="193" y="15" width="300" height="15" forecolor="#4C8FBA" uuid="24b630ec-7464-4b71-8871-db7fc5ac136f">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="6"/>
-					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
-				</textElement>
-				<textFieldExpression><![CDATA[($F{ResponsibleOffice_OfficeAtWeb}.equals("") || $F{ResponsibleOffice_OfficeAtWeb}== null) ? null : $F{ResponsibleOffice_OfficeAtWeb}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[($F{ResponsibleOffice_OfficeAtWeb}.equals("") || $F{ResponsibleOffice_OfficeAtWeb} == null) ? null : $F{ResponsibleOffice_OfficeAtWeb}]]></hyperlinkReferenceExpression>
-			</textField>
+				<dataSourceExpression><![CDATA[$F{ResponsibleOfficeDataSource}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["topicresponsibleoffice.jasper"]]></subreportExpression>
+			</subreport>
 			<textField>
 				<reportElement x="0" y="0" width="493" height="30" uuid="c4523b24-d156-4e85-bbec-36a92dd6c8b3">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
