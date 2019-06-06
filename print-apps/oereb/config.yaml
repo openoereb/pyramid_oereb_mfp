@@ -270,14 +270,14 @@ templates:
             httpProcessors:
             - !mapUri    # NEEDED FOR DOCKER ENVIRONMENT
                 mapping:
-                  (https?)://localhost:6543/(.*): "http://wsgi:8080/$2"
+                  (https?)://localhost:6543/(.*): "http://oereb-server:8080/$2"
             - !forwardHeaders
                 headers:
                 - Referer
             - !restrictUris
                 matchers:
                 - !dnsMatch    # NEEDED FOR DOCKER ENVIRONMENT
-                  host: wsgi
+                  host: oereb-server
                   port: 8080
                   reject: false
                 - !ipMatch
