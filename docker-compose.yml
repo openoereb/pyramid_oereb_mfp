@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-  print:
+  oereb-print:
     networks:
     - print-network
     image: camptocamp/mapfish_print:3.20
