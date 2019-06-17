@@ -7,7 +7,8 @@ the `pyramid_oereb server <https://github.com/openoereb/pyramid_oereb>`__
 with `MapFish-Print <https://github.com/mapfish/mapfish-print>`__.
 
 Prerequisites:
-MapFish-Print in version 3.20.0 or later.
+MapFish-Print in version 3.20.0 or later, for the ``allowTransparency``
+feature (required for PDF/A compliance).
 
 Running local tests:
 to run a local instance of mapfish-print with the oereb templates, do:
