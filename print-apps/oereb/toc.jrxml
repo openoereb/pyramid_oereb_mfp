@@ -210,7 +210,7 @@
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="7" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$R{TOCPageLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{ConcernedThemeDataSource} instanceof net.sf.jasperreports.engine.JREmptyDataSource ? $R{NoPLR} : $R{TOCPageLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="232" y="5" width="261" height="10" uuid="0bae6376-40d3-4a91-ada1-04236d63c54c">
