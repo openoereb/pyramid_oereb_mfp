@@ -116,23 +116,6 @@ templates:
                     Lawstatus_Text: *optStr #/definitions/LocalisedText
                     Symbol: !string
                         default: ''
-                    Geometry: !datasource
-                        default: []
-                        attributes:
-                            Point: !string {} #/definitions/PointPropertyType
-                            Line: !string {} #/definitions/CurvePropertyType
-                            Surface: !string {} #/definitions/SurfacePropertyType
-                            Lawstatus: !string {} #/definitions/Lawstatus
-                            MetadataOfGeographicalBaseData: !string {}
-                            ResponsibleOffice_Name: !string {} #/definitions/MultilingualText
-                            ResponsibleOffice_OfficeAtWeb: !string {} #/definitions/WebReference
-                            ResponsibleOffice_UID: *optStr #/definitions/UID
-                            ResponsibleOffice_Line1: *optStr
-                            ResponsibleOffice_Line2: *optStr
-                            ResponsibleOffice_Street: *optStr
-                            ResponsibleOffice_Number: *optStr
-                            ResponsibleOffice_PostalCode: *optStr
-                            ResponsibleOffice_City: *optStr
 
                     legend: !string {}
                     map: !map
@@ -343,12 +326,6 @@ templates:
                     OtherLegend: datasource
                 outputMapper:
                     jrDataSource: OtherLegendDataSource
-            - !createDataSource
-                processors: []
-                inputMapper:
-                    Geometry: datasource
-                outputMapper:
-                    jrDataSource: GeometryDataSource
             - !createDataSource
                 processors: []
                 inputMapper:
