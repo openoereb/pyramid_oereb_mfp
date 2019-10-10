@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2019-04-25T09:53:26 -->
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pdfextract" pageWidth="595" pageHeight="842" sectionType="Part" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" whenResourceMissingType="Error" uuid="d2716064-8ae4-40cf-a575-33afba400e3a">
 	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
 	<property name="net.sf.jasperreports.export.pdfa.icc.profile.path" value="sRGB_IEC61966-2-1_black_scaled.icc"/>
 	<property name="net.sf.jasperreports.export.pdf.exclude.key.TransparentImage" value=""/>
 	<property name="net.sf.jasperreports.styles.inherit.from.default" value="false"/>
-	<property name="net.sf.jasperreports.export.pdfa.conformance" value="pdfa1a"/>
 	<property name="net.sf.jasperreports.export.pdf.tagged" value="true"/>
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
@@ -216,6 +214,9 @@
 					<subreportParameter name="RealEstate_Municipality">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
 					</subreportParameter>
+					<subreportParameter name="RealEstate_SubunitOfLandRegister">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
+					</subreportParameter>
 					<subreportParameter name="RealEstate_EGRID">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_EGRID}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -251,6 +252,9 @@
 					</subreportParameter>
 					<subreportParameter name="REPORT_RESOURCE_BUNDLE">
 						<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="Display_RealEstate_SubunitOfLandRegister">
+						<subreportParameterExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportExpression><![CDATA["toc.jasper"]]></subreportExpression>
 				</p:subreportPart>
@@ -300,6 +304,12 @@
 					</subreportParameter>
 					<subreportParameter name="RealEstate_Municipality">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="RealEstate_SubunitOfLandRegister">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="Display_RealEstate_SubunitOfLandRegister">
+						<subreportParameterExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="RealEstate_EGRID">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_EGRID}]]></subreportParameterExpression>
@@ -484,11 +494,6 @@
 	</group>
 	<detail>
 		<part uuid="dbf7b612-de21-4609-8537-6538c611480c">
-			<!--
-			IMPORTANT NOTE:
-			The RealEstate_RestrictionOnLandownershipDataSource is only of type JRMapCollectionDataSource
-			if there is at least one PLR for the real estate. If there is no PLR it's empty and of type JREmptyDataSource.
-			 -->
 			<printWhenExpression><![CDATA[$P{RealEstate_RestrictionOnLandownershipDataSource} instanceof net.sf.jasperreports.engine.data.JRMapCollectionDataSource]]></printWhenExpression>
 			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
 				<subreportParameter name="REPORT_CONNECTION">

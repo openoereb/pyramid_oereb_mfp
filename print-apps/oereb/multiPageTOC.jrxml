@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TocReport main" pageWidth="595" pageHeight="842" columnWidth="493" leftMargin="51" rightMargin="51" topMargin="28" bottomMargin="20" whenResourceMissingType="Empty" uuid="6e74177b-d551-4a75-ae51-6cdde3f284ce">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -76,6 +76,7 @@
 	<parameter name="RealEstate_FosNr" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
+	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
 	<field name="level" class="java.lang.Integer"/>
 	<field name="label" class="java.lang.String"/>
@@ -129,9 +130,10 @@
 				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="0" y="54" width="493" height="1" uuid="2c7bc46a-93be-4dfe-b2ea-273b4e077203">
+				<reportElement x="0" y="56" width="493" height="1" uuid="2c7bc46a-93be-4dfe-b2ea-273b4e077203">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<graphicElement>
 					<pen lineWidth="0.2" lineStyle="Solid"/>
@@ -153,11 +155,13 @@
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="143">
+		<band height="92">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
-				<reportElement x="0" y="60" width="493" height="22" uuid="596ac5cd-c22b-45eb-aa46-4891db028f3d">
+				<reportElement x="0" y="24" width="493" height="22" uuid="596ac5cd-c22b-45eb-aa46-4891db028f3d">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="15" isBold="true"/>
@@ -165,9 +169,9 @@
 				<textFieldExpression><![CDATA[$R{TableofContentLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="0" y="98" width="493" height="15" uuid="b5873402-580f-4219-a7d4-aa511fd2b1b6">
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+				<reportElement x="0" y="62" width="493" height="15" uuid="b5873402-580f-4219-a7d4-aa511fd2b1b6">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -179,12 +183,13 @@
 					<font fontName="Cadastra" size="9" isBold="true"/>
 					<paragraph spacingAfter="3"/>
 				</textElement>
-				<textFieldExpression><![CDATA[String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($P{Display_RealEstate_SubunitOfLandRegister}) ? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="118" width="492" height="10" uuid="74048771-76de-4810-825e-77d4e5643dd3">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="79" width="492" height="10" uuid="74048771-76de-4810-825e-77d4e5643dd3">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -198,10 +203,11 @@
 				<textFieldExpression><![CDATA[$R{TOCPageLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="232" y="118" width="261" height="10" uuid="0bae6376-40d3-4a91-ada1-04236d63c54c">
+				<reportElement x="232" y="79" width="261" height="10" uuid="0bae6376-40d3-4a91-ada1-04236d63c54c">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<printWhenExpression><![CDATA[!($P{isReduced})]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
