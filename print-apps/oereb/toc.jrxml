@@ -77,6 +77,7 @@
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
+	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<field name="Text" class="java.lang.String"/>
 	<pageHeader>
 		<band height="60">
@@ -166,7 +167,7 @@
 				<textFieldExpression><![CDATA[$R{TableofContentLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="0" y="62" width="493" height="15" uuid="fc1f09ca-765a-4b69-94c2-d92ffec662f7">
+				<reportElement x="0" y="62" width="493" height="15" isPrintWhenDetailOverflows="true" uuid="fc1f09ca-765a-4b69-94c2-d92ffec662f7">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
@@ -180,7 +181,7 @@
 					<font fontName="Cadastra" size="9" isBold="true"/>
 					<paragraph spacingAfter="3"/>
 				</textElement>
-				<textFieldExpression><![CDATA[String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($P{Display_RealEstate_SubunitOfLandRegister}) ? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="29">
