@@ -56,6 +56,7 @@
 	<parameter name="RealEstate_RestrictionOnLandownershipDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="GlossaryDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="Certification" class="java.lang.String"/>
+	<parameter name="CertificationAtWeb" class="java.lang.String"/>
 	<parameter name="MultiPageTOC" class="java.lang.Boolean"/>
 	<variable name="TOC_Appendices" class="java.util.Map">
 		<variableExpression><![CDATA[new java.util.HashMap()]]></variableExpression>
@@ -165,6 +166,9 @@
 					</subreportParameter>
 					<subreportParameter name="Certification">
 						<subreportParameterExpression><![CDATA[$P{Certification}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CertificationAtWeb">
+						<subreportParameterExpression><![CDATA[$P{CertificationAtWeb}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportExpression><![CDATA["mainpage.jasper"]]></subreportExpression>
 				</p:subreportPart>
