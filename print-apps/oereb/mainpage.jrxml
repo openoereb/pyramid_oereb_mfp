@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2019-04-25T10:00:25 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="titlepage" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="493" leftMargin="51" rightMargin="51" topMargin="28" bottomMargin="20" uuid="8ffd7940-5d69-45af-b3ac-fa15a5db24b6">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -39,6 +38,7 @@
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="Certification" class="java.lang.String"/>
+	<parameter name="CertificationAtWeb" class="java.lang.String"/>
 	<title>
 		<band height="735">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -156,15 +156,15 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{StampDateSignature}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isStretchWithOverflow="true">
 				<reportElement isPrintRepeatedValues="false" x="0" y="709" width="490" height="12" uuid="5090c0e3-b8c0-4df8-9447-d203a7d6a664">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<printWhenExpression><![CDATA[$P{Display_Certification}]]></printWhenExpression>
 				</reportElement>
-				<textElement>
+				<textElement markup="html">
 					<font fontName="Cadastra" size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{Certification}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{Certification} + (($P{CertificationAtWeb} == null) ? null : ", <a href='"+$P{CertificationAtWeb}+"' style=\"color:#4C8FBA\">"+$P{CertificationAtWeb}+"</a>")]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="506" width="493" height="17" uuid="b1be1539-699e-4517-9297-bca1bb7db679">
