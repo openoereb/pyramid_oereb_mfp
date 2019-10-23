@@ -32,11 +32,10 @@
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[$F{Title} != null || $F{OfficialTitle} != null]]></printWhenExpression>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
-				<reportElement positionType="Float" x="0" y="13" width="300" height="12" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement positionType="Float" x="0" y="14" width="300" height="11" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<printWhenExpression><![CDATA[!($F{TextAtWeb}.equals("") || $F{TextAtWeb} == null)]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="0" bottomPadding="3"/>
@@ -55,24 +54,24 @@
 				<textFieldExpression><![CDATA[((ArrayList)$P{TOC_Appendices}.get($P{Theme_Text})).add($F{Title}.equals("") ? $F{OfficialTitle} : $F{Title}) ? "" : ""]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" bookmarkLevel="2">
-				<reportElement x="0" y="0" width="300" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="114a9f86-a715-4eb3-a8a3-5b17bad23c1a">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement x="0" y="0" width="300" height="14" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="114a9f86-a715-4eb3-a8a3-5b17bad23c1a">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box bottomPadding="3"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="8"/>
+					<font fontName="Cadastra" size="8.5"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{Title}.equals("") || $F{Title} == null ? ($F{OfficialTitle}.equals("") || $F{OfficialTitle} == null ? "-" :   $F{OfficialTitle}): $F{Title}) + (($F{Abbreviation}.equals("") || $F{Abbreviation} == null) ? "" : " (" + $F{Abbreviation} + ")") + (($F{OfficialNumber}.equals("") || $F{OfficialNumber} == null) ? "" : ", " + $F{OfficialNumber})]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="15">
+		<band height="14">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
-				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="300" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="54a11828-13b7-448c-a1ee-27dfaeb28bd0">
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="300" height="14" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="54a11828-13b7-448c-a1ee-27dfaeb28bd0">
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -80,6 +79,7 @@
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{Title} == null || $F{Title}.equals("")) && ($F{OfficialTitle} == null || $F{OfficialTitle}.equals(""))]]></printWhenExpression>
 				</reportElement>
 				<box bottomPadding="3"/>
