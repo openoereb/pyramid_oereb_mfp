@@ -43,7 +43,10 @@ templates:
             MunicipalityLogo: *optStr
             MunicipalityLogoRef: *optStr
             ExtractIdentifier: !string {}
-            Certification: !string {} #/definitions/MultilingualMText
+            Certification: !string #/definitions/MultilingualMText
+              default: ""
+            CertificationAtWeb: !string #/definitions/MultilingualMText
+              default: ""
             Footer: !string {}
             QRCode: *optStr
             QRCodeRef: *optStr
