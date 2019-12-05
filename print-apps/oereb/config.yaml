@@ -92,6 +92,8 @@ templates:
                                 default: ''
                             LengthShare: !string
                                 default: ''
+                            NrOfPoints: !string
+                                default: ''
                             SymbolRef: !string
                                 default: ''
                             Information: !string #/definitions/MultilingualMText
