@@ -131,6 +131,7 @@ templates:
                             dpi: 144
                             zoomToFeatures:
                                 minScale: 0
+                                minMargin: 10 # This value must be the same as the pyramid_oereb print buffer.
                     baseLayers: !staticLayers {}
 
                     ResponsibleOffice_Name: !string #/definitions/MultilingualText
@@ -231,6 +232,7 @@ templates:
                     dpi: 144
                     zoomToFeatures:
                         minScale: 0
+                        minMargin: 10 # This value must be the same as the pyramid_oereb print buffer.
             baseLayers: !staticLayers {}
             overlayLayers: !staticLayers
                 default:
@@ -254,7 +256,7 @@ templates:
             directory: '.'
         - !configureHttpRequests
             httpProcessors:
-            - !mapUri    # NEEDED FOR DOCKER ENVIRONMENT
+            - !mapUri # NEEDED FOR DOCKER ENVIRONMENT
                 mapping:
                   (https?)://localhost:6543/(.*): "http://oereb-server:8080/$2"
             - !forwardHeaders
