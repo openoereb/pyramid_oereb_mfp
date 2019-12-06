@@ -10,6 +10,7 @@
 		</queryString>
 		<field name="AreaShare" class="java.lang.String"/>
 		<field name="LengthShare" class="java.lang.String"/>
+		<field name="NrOfPoints" class="java.lang.String"/>
 		<field name="SymbolRef" class="java.lang.String"/>
 		<field name="Information" class="java.lang.String"/>
 		<field name="PartInPercent" class="java.lang.Double"/>

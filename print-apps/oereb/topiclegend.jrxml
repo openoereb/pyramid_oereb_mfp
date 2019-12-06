@@ -5,6 +5,7 @@
 	<parameter name="Geom_Type" class="java.lang.String"/>
 	<field name="AreaShare" class="java.lang.String"/>
 	<field name="LengthShare" class="java.lang.String"/>
+	<field name="NrOfPoints" class="java.lang.String"/>
 	<field name="SymbolRef" class="java.lang.String"/>
 	<field name="Information" class="java.lang.String"/>
 	<field name="PartInPercent" class="java.lang.String"/>
@@ -56,6 +57,17 @@
 					<font fontName="Cadastra" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{LengthShare}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="101" y="0" width="150" height="17" uuid="0f8b4f0d-278c-4906-b608-181ff2add08e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA["NrOfPoints".equals($F{Geom_Type})]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+					<font fontName="Cadastra" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NrOfPoints}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="157" y="0" width="143" height="17" uuid="80654d47-cb87-4690-a7ca-82730f9bb384">
