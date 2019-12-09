@@ -45,7 +45,7 @@
 					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TextAtWeb}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[($F{TextAtWeb}.equals("") || $F{TextAtWeb} == null) ? null : $F{TextAtWeb}]]></hyperlinkReferenceExpression>
+				<hyperlinkReferenceExpression><![CDATA[$F{TextAtWeb}]]></hyperlinkReferenceExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement x="190" y="0" width="110" height="10" uuid="179b7611-a023-4e6c-bd26-1f128b45058d">
