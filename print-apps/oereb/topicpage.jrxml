@@ -370,21 +370,22 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CompleteLegendLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="193" y="0" width="300" height="18" forecolor="#4C8FBA" uuid="a70d3e5c-bc32-4737-ba76-60f6cc56a8e2">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{legend}.equals("") || $F{legend} == null)]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="2" bottomPadding="3"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="6"/>
 					<paragraph spacingBefore="0" spacingAfter="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{legend}.equals("") || $F{legend} == null) ? null : $F{legend}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[($F{legend}.equals("") || $F{legend} == null) ? null : $F{legend}]]></hyperlinkReferenceExpression>
+				<textFieldExpression><![CDATA[$F{legend}]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA[$F{legend}]]></hyperlinkReferenceExpression>
 			</textField>
 		</band>
 		<band height="47">

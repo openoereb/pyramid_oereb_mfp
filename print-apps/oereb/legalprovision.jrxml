@@ -31,7 +31,7 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[$F{Title} != null || $F{OfficialTitle} != null]]></printWhenExpression>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement positionType="Float" x="0" y="13" width="300" height="12" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -45,14 +45,15 @@
 					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TextAtWeb}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[($F{TextAtWeb}.equals("") || $F{TextAtWeb} == null) ? null : $F{TextAtWeb}]]></hyperlinkReferenceExpression>
+				<hyperlinkReferenceExpression><![CDATA[$F{TextAtWeb}]]></hyperlinkReferenceExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement x="190" y="0" width="110" height="10" uuid="179b7611-a023-4e6c-bd26-1f128b45058d">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[((ArrayList)$P{TOC_Appendices}.get($P{Theme_Text})).add($F{Title}.equals("") ? $F{OfficialTitle} : $F{Title}) ? "" : ""]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA[((ArrayList)$P{TOC_Appendices}.get($P{Theme_Text})).add($F{Title}.equals("") ? $F{OfficialTitle} : $F{Title}) ? "" : ""]]></hyperlinkReferenceExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" bookmarkLevel="2">
 				<reportElement x="0" y="0" width="300" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="114a9f86-a715-4eb3-a8a3-5b17bad23c1a">

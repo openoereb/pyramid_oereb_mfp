@@ -20,20 +20,21 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="13" width="300" height="7" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="43b94d8c-f86f-417d-83ec-78e70dcb55f8">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb}== null]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="1"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="6"/>
 					<paragraph leftIndent="8" spacingAfter="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb}== null) ? null : $F{OfficeAtWeb}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[($F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb} == null) ? null : $F{OfficeAtWeb}]]></hyperlinkReferenceExpression>
+				<textFieldExpression><![CDATA[$F{OfficeAtWeb}]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA[$F{OfficeAtWeb}]]></hyperlinkReferenceExpression>
 			</textField>
 		</band>
 	</detail>
