@@ -337,7 +337,7 @@ templates:
                 outputMapper:
                     jrDataSource: OtherLegendDataSource
             - !createDataSource
-                processors: 
+                processors: &dsrc
                 - !createDataSource
                     processors: []
                     inputMapper:
@@ -349,13 +349,13 @@ templates:
                 outputMapper:
                     jrDataSource: LegalProvisionsDataSource
             - !createDataSource
-                processors: []
+                processors: *dsrc
                 inputMapper:
                     Hints: datasource
                 outputMapper:
                     jrDataSource: HintsDataSource
             - !createDataSource
-                processors: []
+                processors: *dsrc
                 inputMapper:
                     Laws: datasource
                 outputMapper:

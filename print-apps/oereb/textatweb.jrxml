@@ -13,13 +13,14 @@
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[!($F{URL}.equals("") || $F{URL} == null)]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="0" bottomPadding="3"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="6"/>
-					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{URL}]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA[$F{URL}]]></hyperlinkReferenceExpression>
 			</textField>
 		</band>
 	</detail>
