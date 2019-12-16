@@ -157,7 +157,10 @@ templates:
                     LegalProvisions: !datasource
                         default: []
                         attributes: &lpra
-                            TextAtWeb: !string {} #/definitions/MultilingualUri
+                            TextAtWeb: !datasource
+                                default: []
+                                attributes:
+                                    URL: *optStr #/definitions/MultilingualUri
                             Lawstatus_Code: *optStr
                             Lawstatus_Text: *optStr #/definitions/LocalisedText
                             Number: *optStr #/definitions/ArticleNumber
@@ -334,7 +337,13 @@ templates:
                 outputMapper:
                     jrDataSource: OtherLegendDataSource
             - !createDataSource
-                processors: []
+                processors: 
+                - !createDataSource
+                    processors: []
+                    inputMapper:
+                        TextAtWeb: datasource
+                    outputMapper:
+                        jrDataSource: TextAtWebDataSource
                 inputMapper:
                     LegalProvisions: datasource
                 outputMapper:

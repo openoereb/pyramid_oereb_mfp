@@ -21,7 +21,7 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
 	<parameter name="Theme_Text" class="java.lang.String"/>
-	<field name="TextAtWeb" class="java.lang.String"/>
+	<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="Title" class="java.lang.String"/>
 	<field name="OfficialNumber" class="java.lang.String"/>
 	<field name="OfficialTitle" class="java.lang.String"/>
@@ -31,22 +31,17 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[$F{Title} != null || $F{OfficialTitle} != null]]></printWhenExpression>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
-				<reportElement positionType="Float" x="0" y="13" width="300" height="12" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
+			<subreport>
+				<reportElement mode="Transparent" x="0" y="13" width="300" height="12" isRemoveLineWhenBlank="true" uuid="aea2a6e2-1814-4099-b8e4-6e588177db99">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-					<printWhenExpression><![CDATA[!($F{TextAtWeb}.equals("") || $F{TextAtWeb} == null)]]></printWhenExpression>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box topPadding="0" bottomPadding="3"/>
-				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="6"/>
-					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TextAtWeb}]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[$F{TextAtWeb}]]></hyperlinkReferenceExpression>
-			</textField>
+				<dataSourceExpression><![CDATA[$F{TextAtWebDataSource}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["textatweb.jasper"]]></subreportExpression>
+			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
 				<reportElement x="190" y="0" width="110" height="10" uuid="179b7611-a023-4e6c-bd26-1f128b45058d">
 					<property name="local_mesure_unitheight" value="pixel"/>
