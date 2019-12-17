@@ -5,19 +5,20 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<field name="URL" class="java.lang.String"/>
 	<detail>
-		<band height="12">
+		<band height="9">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
-				<reportElement positionType="Float" x="0" y="0" width="300" height="12" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="300" height="9" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="010fa648-c53e-4fa5-82ab-ce9a63ed9bd5">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[!($F{URL}.equals("") || $F{URL} == null)]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="0" bottomPadding="3"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="6"/>
+					<paragraph leftIndent="8" spacingBefore="0" spacingAfter="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{URL}]]></textFieldExpression>
 				<hyperlinkReferenceExpression><![CDATA[$F{URL}]]></hyperlinkReferenceExpression>
