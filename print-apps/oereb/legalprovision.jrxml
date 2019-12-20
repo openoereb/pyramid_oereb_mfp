@@ -56,7 +56,7 @@
 		<band height="9">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<subreport>
-				<reportElement stretchType="ContainerBottom" mode="Transparent" x="0" y="0" width="300" height="9" isRemoveLineWhenBlank="true" uuid="aea2a6e2-1814-4099-b8e4-6e588177db99">
+				<reportElement stretchType="ContainerBottom" mode="Transparent" x="0" y="0" width="300" height="9" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="aea2a6e2-1814-4099-b8e4-6e588177db99">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -66,25 +66,6 @@
 				<dataSourceExpression><![CDATA[$F{TextAtWebDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA["textatweb.jasper"]]></subreportExpression>
 			</subreport>
-		</band>
-		<band height="15">
-			<property name="local_mesure_unitheight" value="pixel"/>
-			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<staticText>
-				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="300" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="54a11828-13b7-448c-a1ee-27dfaeb28bd0">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<printWhenExpression><![CDATA[($F{Title} == null || $F{Title}.equals("")) && ($F{OfficialTitle} == null || $F{OfficialTitle}.equals(""))]]></printWhenExpression>
-				</reportElement>
-				<box bottomPadding="3"/>
-				<textElement markup="html"/>
-				<text><![CDATA[&mdash;]]></text>
-			</staticText>
 		</band>
 	</detail>
 </jasperReport>
