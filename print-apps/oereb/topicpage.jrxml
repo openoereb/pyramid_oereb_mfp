@@ -408,7 +408,7 @@
 				<subreportExpression><![CDATA["legalprovision.jasper"]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="493" height="18" uuid="bc365be9-27bf-41cb-8f51-82a3b7af3eda">
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="28" width="493" height="18" isPrintWhenDetailOverflows="true" uuid="bc365be9-27bf-41cb-8f51-82a3b7af3eda">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -448,7 +448,7 @@
 				<subreportExpression><![CDATA["legalprovision.jasper"]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="493" height="18" uuid="8f553e43-b8da-410e-b472-0116a8793b6d">
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="493" height="18" isPrintWhenDetailOverflows="true" uuid="8f553e43-b8da-410e-b472-0116a8793b6d">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
@@ -489,7 +489,7 @@
 				<subreportExpression><![CDATA["legalprovision.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="493" height="18" uuid="94ac5c43-32f0-4769-ba84-96a56cb660b6">
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="493" height="18" isPrintWhenDetailOverflows="true" uuid="94ac5c43-32f0-4769-ba84-96a56cb660b6">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
@@ -527,7 +527,7 @@
 				<subreportExpression><![CDATA["topicresponsibleoffice.jasper"]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="493" height="30" uuid="c4523b24-d156-4e85-bbec-36a92dd6c8b3">
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="493" height="30" isPrintWhenDetailOverflows="true" uuid="c4523b24-d156-4e85-bbec-36a92dd6c8b3">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
