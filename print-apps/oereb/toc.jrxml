@@ -78,7 +78,9 @@
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
+	<parameter name="nbTocPages" class="java.lang.Integer"/>
 	<field name="Text" class="java.lang.String"/>
+	<variable name="page_counter" class="java.lang.Integer" incrementType="Report"/>
 	<pageHeader>
 		<band height="60">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -197,10 +199,13 @@
 				<subreportParameter name="isReduced">
 					<subreportParameterExpression><![CDATA[$P{isReduced}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="page_counter">
+					<subreportParameterExpression><![CDATA[$P{nbTocPages}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[$P{BookmarkDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{isReduced}?"tocReduced.jasper":"tocFull.jasper"]]></subreportExpression>
 			</subreport>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" evaluationTime="Report">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="2" width="492" height="10" uuid="74048771-76de-4810-825e-77d4e5643dd3">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
