@@ -516,7 +516,7 @@
 				</reportElement>
 			</break>
 			<subreport>
-				<reportElement mode="Transparent" x="193" y="1" width="300" height="26" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="1d3ac1d8-7b5e-4caa-bcc0-cf857dddc651">
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="193" y="1" width="300" height="26" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="1d3ac1d8-7b5e-4caa-bcc0-cf857dddc651">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -527,7 +527,7 @@
 				<subreportExpression><![CDATA["topicresponsibleoffice.jasper"]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="493" height="30" isPrintWhenDetailOverflows="true" uuid="c4523b24-d156-4e85-bbec-36a92dd6c8b3">
+				<reportElement positionType="Float" stretchType="ContainerBottom" isPrintRepeatedValues="false" x="0" y="0" width="493" height="30" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="c4523b24-d156-4e85-bbec-36a92dd6c8b3">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
