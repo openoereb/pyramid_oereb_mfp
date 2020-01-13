@@ -9,7 +9,7 @@
 		<band height="20" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="300" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="083811f5-8641-45e8-84c7-ed0819bc3237">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="300" height="13" isRemoveLineWhenBlank="true" uuid="083811f5-8641-45e8-84c7-ed0819bc3237">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -21,12 +21,12 @@
 				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
-				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="13" width="300" height="7" isPrintWhenDetailOverflows="true" forecolor="#4C8FBA" uuid="43b94d8c-f86f-417d-83ec-78e70dcb55f8">
+				<reportElement positionType="Float" stretchType="ContainerBottom" isPrintRepeatedValues="false" x="0" y="13" width="300" height="7" isPrintInFirstWholeBand="true" forecolor="#4C8FBA" uuid="43b94d8c-f86f-417d-83ec-78e70dcb55f8">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<printWhenExpression><![CDATA[$F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb}== null]]></printWhenExpression>
+					<printWhenExpression><![CDATA[!$F{OfficeAtWeb}.equals("") || $F{OfficeAtWeb}!= null]]></printWhenExpression>
 				</reportElement>
 				<box topPadding="1"/>
 				<textElement verticalAlignment="Top">
