@@ -295,6 +295,14 @@
 		</band>
 		<band height="90">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport overflowType="Stretch">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="260" y="39" width="233" height="17" uuid="9fd65c2b-a447-43f1-88f6-9a41a9ca02be">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{ExclusionOfLiabilityDataSource}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["exclusion_of_liability.jasper"]]></subreportExpression>
+			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="50" width="230" height="10" uuid="9463b6fb-b28a-4793-9bc1-1c24749e48c4">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -304,16 +312,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{GeneralInformation}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="0" y="39" width="230" height="11" uuid="e834b965-7821-4998-ac78-82c63301b2e1">
-					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="6" isBold="true"/>
-				</textElement>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement x="0" y="39" width="230" height="11" uuid="e8e72f34-6553-41ad-a3cd-75273b060f24">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
@@ -326,13 +324,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{GeneralInformationLabel}]]></textFieldExpression>
 			</textField>
-			<subreport>
-				<reportElement x="260" y="39" width="233" height="21" isPrintWhenDetailOverflows="true" uuid="9fd65c2b-a447-43f1-88f6-9a41a9ca02be">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<dataSourceExpression><![CDATA[$P{ExclusionOfLiabilityDataSource}]]></dataSourceExpression>
-				<subreportExpression><![CDATA["exclusion_of_liability.jasper"]]></subreportExpression>
-			</subreport>
 			<textField>
 				<reportElement positionType="Float" x="0" y="65" width="230" height="10" uuid="85c6358a-de30-4b2c-a2b4-15d2925ed1e1">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
