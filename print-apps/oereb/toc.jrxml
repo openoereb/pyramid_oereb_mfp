@@ -293,7 +293,7 @@
 				<subreportExpression><![CDATA["themelist.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="103">
+		<band height="90">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<subreport overflowType="Stretch">
 				<reportElement isPrintRepeatedValues="false" x="260" y="39" width="233" height="46" uuid="9fd65c2b-a447-43f1-88f6-9a41a9ca02be">
