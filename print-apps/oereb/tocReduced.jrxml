@@ -16,6 +16,7 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
+	<parameter name="page_counter" class="java.lang.Integer" evaluationTime="Late"/>
 	<field name="level" class="java.lang.Integer"/>
 	<field name="label" class="java.lang.String"/>
 	<field name="pageIndex" class="java.lang.Integer"/>
@@ -36,7 +37,7 @@
 					<font fontName="Cadastra" size="9" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + $F{pageIndex} + 2]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{pageIndex} + $P{page_counter} +2]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="LocalAnchor">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="493" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="c7dfd2ec-2cdd-4131-b727-b23f03a7ecd8">
