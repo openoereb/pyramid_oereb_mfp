@@ -183,7 +183,7 @@
 					<font fontName="Cadastra" size="9" isBold="true"/>
 					<paragraph spacingAfter="3"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($P{Display_RealEstate_SubunitOfLandRegister}) ? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} && !$P{RealEstate_SubunitOfLandRegister}.equals("")? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="29">
