@@ -359,7 +359,7 @@
 				<textFieldExpression><![CDATA[$R{BBOXLegendLabel}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="193" y="2" width="299" height="16" uuid="f88a6ee0-42e5-4d2c-b1ab-9abb4f950664">
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="193" y="0" width="299" height="19" uuid="f88a6ee0-42e5-4d2c-b1ab-9abb4f950664">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
