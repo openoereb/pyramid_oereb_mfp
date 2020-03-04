@@ -32,22 +32,17 @@ templates:
                     Text: !string {} #/definitions/LocalisedText
             isReduced: !boolean {}
             nbTocPages: !integer {}
-            LogoPLRCadastre: !string
-              default: ""
+            LogoPLRCadastre: *optStr
             LogoPLRCadastreRef: *optStr
-            FederalLogo: !string
-              default: ""
+            FederalLogo: *optStr
             FederalLogoRef: *optStr
-            CantonalLogo: !string
-              default: ""
+            CantonalLogo: *optStr
             CantonalLogoRef: *optStr
             MunicipalityLogo: *optStr
             MunicipalityLogoRef: *optStr
             ExtractIdentifier: !string {}
-            Certification: !string #/definitions/MultilingualMText
-              default: ""
-            CertificationAtWeb: !string #/definitions/MultilingualMText
-              default: ""
+            Certification: *optStr #/definitions/MultilingualMText
+            CertificationAtWeb: *optStr #/definitions/MultilingualMText
             Footer: !string {}
             QRCode: *optStr
             QRCodeRef: *optStr
@@ -67,62 +62,43 @@ templates:
             RealEstate_Type: !string {}
             RealEstate_Canton: !string {}
             RealEstate_Municipality: !string {}
-            RealEstate_SubunitOfLandRegister: !string
-                default: ''
+            RealEstate_SubunitOfLandRegister: *optStr
             Display_RealEstate_SubunitOfLandRegister: !boolean
                 default: true
             Display_Certification: !boolean
                 default: true
             RealEstate_FosNr: !string {}
-            RealEstate_MetadataOfGeographicalBaseData: !string
-                default: ''
+            RealEstate_MetadataOfGeographicalBaseData: *optStr
             RealEstate_LandRegistryArea: !string {}
             RealEstate_RestrictionOnLandownership: !datasource
                 default: []
                 attributes:
                     Legend: !datasource
                         attributes:
-                            TypeCode: !string #/definitions/RestrictiontypeCode
-                                default: ''
-                            TypeCodelist: !string
-                                default: ''
+                            TypeCode: *optStr #/definitions/RestrictiontypeCode
+                            TypeCodelist: *optStr
                             Geom_Type: !string {}
-                            AreaShare: !string #/definitions/AreaShare
-                                default: ''
-                            PartInPercent: !string
-                                default: ''
-                            LengthShare: !string
-                                default: ''
-                            NrOfPoints: !string
-                                default: ''
-                            SymbolRef: !string
-                                default: ''
-                            Information: !string #/definitions/MultilingualMText
-                                default: ''
+                            AreaShare: *optStr #/definitions/AreaShare
+                            PartInPercent: *optStr
+                            LengthShare: *optStr
+                            NrOfPoints: *optStr
+                            SymbolRef: *optStr
+                            Information: *optStr #/definitions/MultilingualMText
                     OtherLegend: !datasource
                         default: []
                         attributes:
-                            TypeCode: !string #/definitions/RestrictiontypeCode
-                                default: ''
-                            SymbolRef: !string
-                                default: ''
-                            LegendText: !string #/definitions/MultilingualMText
-                                default: ''
-                    Geom_Type: !string
-                        default: ''
-                    Theme_Code: !string
-                        default: ''
-                    Theme_Text: !string #/definitions/LocalisedText
-                        default: ''
-                    SubTheme: !string
-                        default: ''
+                            TypeCode: *optStr #/definitions/RestrictiontypeCode
+                            SymbolRef: *optStr
+                            LegendText: *optStr #/definitions/MultilingualMText
+                    Geom_Type: *optStr
+                    Theme_Code: *optStr
+                    Theme_Text: *optStr #/definitions/LocalisedText
+                    SubTheme: *optStr
                     Split_SubTheme: !boolean
                         default: false
                     Lawstatus_Code: *optStr
                     Lawstatus_Text: *optStr #/definitions/LocalisedText
-                    Symbol: !string
-                        default: ''
-
+                    Symbol: *optStr
                     legend: !string {}
                     map: !map
                         maxDpi: 254
@@ -137,24 +113,15 @@ templates:
                                 minMargin: 10 # This value must be the same as the pyramid_oereb print buffer.
                     baseLayers: !staticLayers {}
 
-                    ResponsibleOffice_Name: !string #/definitions/MultilingualText
-                        default: ''
-                    ResponsibleOffice_OfficeAtWeb: !string #/definitions/WebReference
-                        default: ''
-                    ResponsibleOffice_UID: !string #/definitions/UID
-                        default: ''
-                    ResponsibleOffice_Line1: !string
-                        default: ''
-                    ResponsibleOffice_Line2: !string
-                        default: ''
-                    ResponsibleOffice_Street: !string
-                        default: ''
-                    ResponsibleOffice_Number: !string
-                        default: ''
-                    ResponsibleOffice_PostalCode: !string
-                        default: ''
-                    ResponsibleOffice_City: !string
-                        default: ''
+                    ResponsibleOffice_Name: *optStr #/definitions/MultilingualText
+                    ResponsibleOffice_OfficeAtWeb: *optStr #/definitions/WebReference
+                    ResponsibleOffice_UID: *optStr #/definitions/UID
+                    ResponsibleOffice_Line1: *optStr
+                    ResponsibleOffice_Line2: *optStr
+                    ResponsibleOffice_Street: *optStr
+                    ResponsibleOffice_Number: *optStr
+                    ResponsibleOffice_PostalCode: *optStr
+                    ResponsibleOffice_City: *optStr
                     LegalProvisions: !datasource
                         default: []
                         attributes: &lpra
@@ -173,7 +140,7 @@ templates:
                             Canton: *optStr #/definitions/CantonCode
                             Municipality: *optStr #/definitions/MunicipalityCode
                             ResponsibleOffice_Name: !string {} #/definitions/MultilingualText
-                            ResponsibleOffice_OfficeAtWeb: !string {} #/definitions/WebReference
+                            ResponsibleOffice_OfficeAtWeb: *optStr #/definitions/WebReference
                             ResponsibleOffice_UID: *optStr #/definitions/UID
                             ResponsibleOffice_Line1: *optStr
                             ResponsibleOffice_Line2: *optStr
@@ -193,20 +160,17 @@ templates:
                         default: []
                         attributes:
                             Name: !string {}
-                            OfficeAtWeb: !string {}
+                            OfficeAtWeb: *optStr
             ExclusionOfLiability: !datasource
                 default: []
                 attributes:
                     Title: !string {} #/definitions/MultilingualText
                     Content: !string {} #/definitions/MultilingualText
             PLRCadastreAuthority_Name: !string {} #/definitions/MultilingualText
-            PLRCadastreAuthority_OfficeAtWeb: !string {} #/definitions/WebReference
-            PLRCadastreAuthority_UID: !string #/definitions/UID
-                default: ''
-            PLRCadastreAuthority_Line1: !string
-                default: ''
-            PLRCadastreAuthority_Line2: !string
-                default: ''
+            PLRCadastreAuthority_OfficeAtWeb: *optStr #/definitions/WebReference
+            PLRCadastreAuthority_UID: *optStr #/definitions/UID
+            PLRCadastreAuthority_Line1: *optStr
+            PLRCadastreAuthority_Line2: *optStr
             PLRCadastreAuthority_Street: !string {}
             PLRCadastreAuthority_Number: !string {}
             PLRCadastreAuthority_PostalCode: !string {}
