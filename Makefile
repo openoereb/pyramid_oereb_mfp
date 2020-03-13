@@ -7,4 +7,4 @@ git-attributes:
 
 .PHONY: serve
 serve:
-	docker-compose up --build --remove-orphans
+	docker-compose up --build --remove-orphans -d
