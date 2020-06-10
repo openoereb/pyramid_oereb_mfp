@@ -12,10 +12,10 @@ We recommend you run the dockerized MapFish-Print. If this is not possible for y
 ensure the following:
 
 1. verify that Java is installed in version 8 or later on your system (required by this MapFish-Print version)
-2. add the Cadastra font package to your print app, by creating a folder ``WEB-INF/lib`` in the app
+2. add the Cadastra font package to your print app, by going to the folder ``WEB-INF/lib`` in the MapFish-Print app
   and copying the Cadastra.jar file to it.
 You can find a copy of this package
-[in the MapFish-Print repository](https://github.com/mapfish/mapfish-print/tree/master/core/docker/usr/local/tomcat/webapps/ROOT/WEB-INF/lib).
+[in the MapFish-Print repository](https://github.com/mapfish/mapfish-print/tree/master/core/docker/usr/local/tomcat/webapps/ROOT/WEB-INF/lib). Make sure you download it cleanly: to check that, do for example a ``jar tf Cadastra.jar`` on it. If this does not work, it will not work within MapFish-Print either.
 
 ## Running local tests:
 To run a local instance of mapfish-print (in docker) with the oereb templates, do:
