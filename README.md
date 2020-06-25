@@ -6,7 +6,7 @@ using [MapFish-Print](https://github.com/mapfish/mapfish-print>).
 
 ## Prerequisites
 Starting version [1.5.0](https://github.com/openoereb/pyramid_oereb_mfp/releases/tag/v1.5.0),
-you require MapFish-Print in version 3.20.0 or later, which introduces the ``allowTransparency``
+you require MapFish-Print in version 3.23.1 or later, which introduces the ``allowTransparency``
 feature (required for PDF/A compliance).
 We recommend you run the dockerized MapFish-Print. If this is not possible for you, you need to
 ensure the following:
