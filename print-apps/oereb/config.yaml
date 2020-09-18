@@ -102,12 +102,12 @@ templates:
                     legend: !string {}
                     map: !map
                         maxDpi: 254
-                        dpiSuggestions: [144, 254]
+                        dpiSuggestions: [254]
                         width: 493
                         height: 280
                         default:
                             projection: "EPSG:2056"
-                            dpi: 144
+                            dpi: 254
                             zoomToFeatures:
                                 minScale: 0
                                 minMargin: 10 # This value must be the same as the pyramid_oereb print buffer.
@@ -194,12 +194,12 @@ templates:
             features: !features {}
             map: !map
                 maxDpi: 254
-                dpiSuggestions: [144, 254]
+                dpiSuggestions: [254]
                 width: 493
                 height: 280
                 default:
                     projection: "EPSG:2056"
-                    dpi: 144
+                    dpi: 254
                     zoomToFeatures:
                         minScale: 0
                         minMargin: 10 # This value must be the same as the pyramid_oereb print buffer.
