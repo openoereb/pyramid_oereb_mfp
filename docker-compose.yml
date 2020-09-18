@@ -5,7 +5,7 @@ services:
   oereb-print:
     networks:
     - print-network
-    image: camptocamp/mapfish_print:3.23
+    image: camptocamp/mapfish_print:3.24
     environment:
       LOG_LEVEL: INFO
       CATALINA_OPTS: >-
