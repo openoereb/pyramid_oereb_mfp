@@ -5,9 +5,14 @@ the [pyramid_oereb server](https://github.com/openoereb/pyramid_oereb)
 using [MapFish-Print](https://github.com/mapfish/mapfish-print>).
 
 ## Prerequisites
+Starting version [1.8.0](https://github.com/openoereb/pyramid_oereb_mfp/releases/tag/v1.8.0),
+you require MapFish-Print in version 3.25 or later, which uses the ``pdfA``
+feature (required for PDF/A compliance).
+
 Starting version [1.5.0](https://github.com/openoereb/pyramid_oereb_mfp/releases/tag/v1.5.0),
 you require MapFish-Print in version 3.23.1 or later, which introduces the ``allowTransparency``
 feature (required for PDF/A compliance).
+
 We recommend you run the dockerized MapFish-Print. If this is not possible for you, you need to
 ensure the following:
 
