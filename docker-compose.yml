@@ -7,6 +7,7 @@ services:
     - print-network
     image: camptocamp/mapfish_print:3.24
     environment:
+      PRINT_YAML_MAX_ALIASES: 200
       LOG_LEVEL: INFO
       CATALINA_OPTS: >-
         -Xmx512M
