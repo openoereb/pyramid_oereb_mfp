@@ -21,6 +21,9 @@ ensure the following:
   and copying the Cadastra.jar file to it.
 You can find a copy of this package
 [in the MapFish-Print repository](https://github.com/mapfish/mapfish-print/tree/master/core/docker/usr/local/tomcat/webapps/ROOT/WEB-INF/lib). Make sure you download it cleanly: to check that, do for example a ``jar tf Cadastra.jar`` on it. If this does not work, it will not work within MapFish-Print either.
+3. if you are using MapFish-Print in version 3.24 or later, you must add an environment variable
+   PRINT_YAML_MAX_ALIASES to avoid a SnakeYAML error with the newest library of SnakeYAML. The value must be higher than
+   the number of aliases used in the pyramid_oereb_mfp configuration file; you can set it for example to 200 to be on the safe side.
 
 ## Running local tests:
 To run a local instance of mapfish-print (in docker) with the oereb templates, do:
