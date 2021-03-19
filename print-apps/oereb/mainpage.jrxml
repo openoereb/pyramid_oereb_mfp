@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="titlepage" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="493" leftMargin="51" rightMargin="51" topMargin="28" bottomMargin="20" uuid="8ffd7940-5d69-45af-b3ac-fa15a5db24b6">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -16,6 +16,7 @@
 	<parameter name="FederalLogoRef" class="java.lang.String"/>
 	<parameter name="CantonalLogoRef" class="java.lang.String"/>
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
+	<parameter name="PrintCantonLogo" class="java.lang.Boolean"/>
 	<parameter name="PLRCadastreAuthority_Name" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_Street" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_Number" class="java.lang.String"/>
@@ -61,6 +62,7 @@
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
 				</reportElement>
 				<imageExpression><![CDATA[$P{CantonalLogoRef}]]></imageExpression>
 			</image>
@@ -72,6 +74,7 @@
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
 				</reportElement>
 				<imageExpression><![CDATA[$P{MunicipalityLogoRef}]]></imageExpression>
 			</image>
@@ -81,6 +84,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
 					<font fontName="Cadastra" size="6"/>
@@ -156,7 +160,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{StampDateSignature}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField textAdjust="StretchHeight">
 				<reportElement isPrintRepeatedValues="false" x="0" y="709" width="490" height="12" uuid="5090c0e3-b8c0-4df8-9447-d203a7d6a664">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<printWhenExpression><![CDATA[$P{Display_Certification}]]></printWhenExpression>
@@ -289,7 +293,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CadastreLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement x="193" y="523" width="300" height="17" uuid="21952a7d-f2e7-4421-b1ad-dad328683e6b">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -367,7 +371,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{ExtractIdentifier}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement x="0" y="85" width="493" height="65" uuid="b988c468-a5ad-430c-89da-c7c949f88426">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -435,7 +439,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ResponsibleAuthorityLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField textAdjust="StretchHeight">
 				<reportElement x="0" y="620" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb">
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
@@ -447,6 +451,32 @@
 					<paragraph leftIndent="192"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{PLRCadastreAuthority_Name}+'\n'+$P{PLRCadastreAuthority_Street} +' '+$P{PLRCadastreAuthority_Number}+'\n'+$P{PLRCadastreAuthority_PostalCode}+' '+$P{PLRCadastreAuthority_City}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" onErrorType="Blank">
+				<reportElement x="209" y="0" width="85" height="28" uuid="08a23a8e-4b0f-47bf-a27c-78ae91dd573d">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$P{PrintCantonLogo}]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{MunicipalityLogoRef}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="209" y="29" width="85" height="15" uuid="43dc5587-0ef7-432a-95c1-f238a1a02752">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$P{PrintCantonLogo}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Cadastra" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
