@@ -160,7 +160,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{StampDateSignature}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight">
+			<textField isStretchWithOverflow="true">
 				<reportElement isPrintRepeatedValues="false" x="0" y="709" width="490" height="12" uuid="5090c0e3-b8c0-4df8-9447-d203a7d6a664">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<printWhenExpression><![CDATA[$P{Display_Certification}]]></printWhenExpression>
@@ -293,7 +293,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CadastreLabel}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="193" y="523" width="300" height="17" uuid="21952a7d-f2e7-4421-b1ad-dad328683e6b">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -371,7 +371,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{ExtractIdentifier}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
 				<reportElement x="0" y="85" width="493" height="65" uuid="b988c468-a5ad-430c-89da-c7c949f88426">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -439,7 +439,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ResponsibleAuthorityLabel}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight">
+			<textField isStretchWithOverflow="true">
 				<reportElement x="0" y="620" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb">
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
