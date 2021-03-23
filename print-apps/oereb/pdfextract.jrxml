@@ -21,6 +21,7 @@
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastre" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
+	<parameter name="PrintCantonLogo" class="java.lang.Boolean"/>
 	<parameter name="PLRCadastreAuthority_UID" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_Name" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_OfficeAtWeb" class="java.lang.String"/>
@@ -99,6 +100,9 @@
 					</subreportParameter>
 					<subreportParameter name="LogoPLRCadastreRef">
 						<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PrintCantonLogo">
+						<subreportParameterExpression><![CDATA[$P{PrintCantonLogo}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="PLRCadastreAuthority_Name">
 						<subreportParameterExpression><![CDATA[$P{PLRCadastreAuthority_Name}]]></subreportParameterExpression>
