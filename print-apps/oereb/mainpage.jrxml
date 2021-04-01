@@ -43,76 +43,6 @@
 	<title>
 		<band height="735">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<image scaleImage="RetainShape" hAlign="Center">
-				<reportElement x="0" y="0" width="124" height="40" uuid="7c892221-cb02-4698-a783-5dfda810a3c1">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
-					<property name="local_mesure_unity" value="mm"/>
-					<property name="local_mesure_unitwidth" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
-					<property name="local_mesure_unitheight" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
-				</reportElement>
-				<imageExpression><![CDATA[$P{FederalLogoRef}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="170" y="0" width="85" height="28" uuid="efa95ff7-66be-479e-a5d4-7a972cc2bd40">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$P{CantonalLogoRef}]]></imageExpression>
-			</image>
-			<image hAlign="Center" onErrorType="Blank">
-				<reportElement x="269" y="0" width="85" height="28" uuid="a8102cb1-b343-41c0-9145-27029e01f557">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
-					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$P{MunicipalityLogoRef}]]></imageExpression>
-			</image>
-			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="269" y="29" width="85" height="15" uuid="82dfa141-758a-44fd-acc3-49cf1bef6c7d">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font fontName="Cadastra" size="6"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
-			</textField>
-			<line>
-				<reportElement x="0" y="54" width="493" height="1" uuid="80768121-cc91-49e4-b862-c48d76eca58b">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
-				</reportElement>
-				<graphicElement>
-					<pen lineWidth="0.2" lineStyle="Solid"/>
-				</graphicElement>
-			</line>
-			<image hAlign="Center">
-				<reportElement x="394" y="0" width="99" height="28" uuid="99ddf2bf-e690-4e1c-8eb3-63603a47bcf9">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-				</reportElement>
-				<imageExpression><![CDATA[$P{LogoPLRCadastreRef}]]></imageExpression>
-			</image>
 			<textField>
 				<reportElement x="0" y="472" width="493" height="17" uuid="e6e5ab1e-49d6-4b4b-b852-d5c8e78ff672">
 					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
@@ -452,32 +382,52 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{PLRCadastreAuthority_Name}+'\n'+$P{PLRCadastreAuthority_Street} +' '+$P{PLRCadastreAuthority_Number}+'\n'+$P{PLRCadastreAuthority_PostalCode}+' '+$P{PLRCadastreAuthority_City}]]></textFieldExpression>
 			</textField>
-			<image hAlign="Center" onErrorType="Blank">
-				<reportElement x="209" y="0" width="85" height="28" uuid="08a23a8e-4b0f-47bf-a27c-78ae91dd573d">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
+			<subreport>
+				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="5593ce53-3995-4d63-8aaa-ed11b332a8a6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="FederalLogoRef">
+					<subreportParameterExpression><![CDATA[$P{FederalLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CantonalLogoRef">
+					<subreportParameterExpression><![CDATA[$P{CantonalLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MunicipalityLogoRef">
+					<subreportParameterExpression><![CDATA[$P{MunicipalityLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LogoPLRCadastreRef">
+					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RealEstate_Municipality">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["titleAllLogos.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="8d02619a-351b-4959-914a-8765f2f8dd02">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<printWhenExpression><![CDATA[!$P{PrintCantonLogo}]]></printWhenExpression>
 				</reportElement>
-				<imageExpression><![CDATA[$P{MunicipalityLogoRef}]]></imageExpression>
-			</image>
-			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="209" y="29" width="85" height="15" uuid="43dc5587-0ef7-432a-95c1-f238a1a02752">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<printWhenExpression><![CDATA[!$P{PrintCantonLogo}]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font fontName="Cadastra" size="6"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
-			</textField>
+				<subreportParameter name="FederalLogoRef">
+					<subreportParameterExpression><![CDATA[$P{FederalLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CantonalLogoRef">
+					<subreportParameterExpression><![CDATA[$P{CantonalLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MunicipalityLogoRef">
+					<subreportParameterExpression><![CDATA[$P{MunicipalityLogoRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LogoPLRCadastreRef">
+					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RealEstate_Municipality">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["titleNoCantonLogo.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</title>
 	<pageFooter>

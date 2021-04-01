@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="topicmapboxlegend" pageWidth="493" pageHeight="55" whenNoDataType="AllSectionsNoDetail" columnWidth="493" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6477891d-f5c5-456f-a115-e91b2a2768c6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
+	<parameter name="FederalLogoRef" class="java.lang.String"/>
+	<parameter name="CantonalLogoRef" class="java.lang.String"/>
+	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
+	<parameter name="RealEstate_Municipality" class="java.lang.String"/>
+	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<title>
+		<band height="55">
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="0" y="0" width="124" height="40" uuid="b6a2cebb-f74e-4818-a53d-64edc9c9fcff">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="local_mesure_unity" value="mm"/>
+					<property name="local_mesure_unitwidth" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="local_mesure_unitheight" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{FederalLogoRef}]]></imageExpression>
+			</image>
+			<image hAlign="Center" onErrorType="Blank">
+				<reportElement x="204" y="0" width="85" height="28" uuid="60b28ab1-24ac-4966-ab26-9fb0d1dd1823">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{MunicipalityLogoRef}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="204" y="29" width="85" height="15" uuid="fcd5d79f-fe06-44fe-9afc-51d584f24a14">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Cadastra" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement x="394" y="0" width="99" height="28" uuid="ea303a21-bb2b-44f8-8be7-76759027ac58">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LogoPLRCadastreRef}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="54" width="493" height="1" uuid="a474cd71-ab81-4d00-a95d-675296ce3be2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.2" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+</jasperReport>
