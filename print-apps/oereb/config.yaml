@@ -230,6 +230,9 @@ templates:
             - !mapUri # NEEDED FOR DOCKER ENVIRONMENT
                 mapping:
                   (https?)://localhost:6543/(.*): "http://oereb-server:8080/$2"
+            - !mapUri # NEEDED FOR DOCKER ENVIRONMENT (Oereblex port)
+                mapping:
+                  (https?)://localhost:6544/(.*): "http://oereb-server:8080/$2"
             - !forwardHeaders
                 headers:
                 - Referer
