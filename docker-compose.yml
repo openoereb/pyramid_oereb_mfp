@@ -11,6 +11,7 @@ services:
       LOG_LEVEL: INFO
       CATALINA_OPTS: >-
         -Xmx512M
+        -Dmapfish.maxContentLength=4194304
     volumes:
       - ./print-apps:/usr/local/tomcat/webapps/ROOT/print-apps:ro
     ports:
