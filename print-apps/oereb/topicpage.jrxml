@@ -63,7 +63,6 @@
 		<field name="OfficeAtWeb" class="java.lang.String"/>
 	</subDataset>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
-	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
 	<parameter name="CreationDate" class="java.lang.String"/>
 	<parameter name="Footer" class="java.lang.String"/>

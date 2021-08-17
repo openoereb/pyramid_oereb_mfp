@@ -40,7 +40,6 @@
 	<style name="HeadingIndex3" style="Heading3"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="BookmarkDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
-	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
 	<parameter name="CreationDate" class="java.lang.String"/>
 	<parameter name="Footer" class="java.lang.String"/>
@@ -175,14 +174,11 @@
 				<subreportParameter name="TOC_Appendices">
 					<subreportParameterExpression><![CDATA[$P{TOC_Appendices}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="isReduced">
-					<subreportParameterExpression><![CDATA[$P{isReduced}]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="page_counter">
 					<subreportParameterExpression><![CDATA[$P{nbTocPages}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[$P{BookmarkDataSource}]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{isReduced}?"tocReduced.jasper":"tocFull.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["tocReduced.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true" evaluationTime="Report">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="2" width="492" height="10" uuid="74048771-76de-4810-825e-77d4e5643dd3">
@@ -207,7 +203,6 @@
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<printWhenExpression><![CDATA[!($P{isReduced})]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="7" isBold="true"/>

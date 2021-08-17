@@ -5,7 +5,6 @@
 	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
-	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
 	<parameter name="CreationDate" class="java.lang.String"/>
 	<parameter name="Footer" class="java.lang.String"/>

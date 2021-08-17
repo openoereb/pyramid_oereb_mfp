@@ -30,7 +30,6 @@ templates:
                 attributes:
                     Code: !string {}
                     Text: !string {} #/definitions/LocalisedText
-            isReduced: !boolean {}
             nbTocPages: !integer {}
             LogoPLRCadastre: *optStr
             LogoPLRCadastreRef: *optStr
@@ -229,10 +228,10 @@ templates:
             httpProcessors:
             - !mapUri # NEEDED FOR DOCKER ENVIRONMENT
                 mapping:
-                  (https?)://localhost:6543/(.*): "http://oereb-server:8080/$2"
+                  (https?)://localhost:6543/(.*): "http://oereb-server:6543/$2"
             - !mapUri # NEEDED FOR DOCKER ENVIRONMENT (Oereblex port)
                 mapping:
-                  (https?)://localhost:6544/(.*): "http://oereb-server:8080/$2"
+                  (https?)://localhost:6544/(.*): "http://oereb-server:6543/$2"
             - !forwardHeaders
                 headers:
                 - Referer
