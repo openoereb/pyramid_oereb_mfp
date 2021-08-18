@@ -83,7 +83,7 @@ templates:
                             LengthShare: *optStr
                             NrOfPoints: *optStr
                             SymbolRef: *optStr
-                            Information: *optStr #/definitions/MultilingualMText
+                            LegendText: *optStr #/definitions/MultilingualMText
                     OtherLegend: !datasource
                         default: []
                         attributes:

@@ -12,7 +12,7 @@
 		<field name="LengthShare" class="java.lang.String"/>
 		<field name="NrOfPoints" class="java.lang.String"/>
 		<field name="SymbolRef" class="java.lang.String"/>
-		<field name="Information" class="java.lang.String"/>
+		<field name="LegendText" class="java.lang.String"/>
 		<field name="PartInPercent" class="java.lang.Double"/>
 		<field name="Geom_Type" class="java.lang.String"/>
 	</subDataset>
