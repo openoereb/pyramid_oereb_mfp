@@ -12,7 +12,6 @@
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
-	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="FederalLogoRef" class="java.lang.String"/>
 	<parameter name="CantonalLogoRef" class="java.lang.String"/>
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
@@ -310,7 +309,7 @@
 				<textElement>
 					<font fontName="Cadastra" size="16" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{isReduced} ? $R{ReducedPublicLawRestrictionsPDFExtract} : $R{FullPublicLawRestrictionsPDFExtract}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$R{ReducedPublicLawRestrictionsPDFExtract}]]></textFieldExpression>
 			</textField>
 			<frame>
 				<reportElement x="0" y="164" width="493" height="280" uuid="3902d7cb-c85b-4b02-931d-28be7edf5696">

@@ -9,7 +9,6 @@
 	<property name="net.sf.jasperreports.export.pdf.tagged" value="true"/>
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
-	<parameter name="isReduced" class="java.lang.Boolean"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
 	<parameter name="CreationDate" class="java.lang.String"/>
 	<parameter name="Footer" class="java.lang.String"/>
@@ -73,9 +72,6 @@
 					</subreportParameter>
 					<subreportParameter name="SUBREPORT_DIR">
 						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter name="isReduced">
-						<subreportParameterExpression><![CDATA[$P{isReduced}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="FederalLogo">
 						<subreportParameterExpression><![CDATA[$P{FederalLogo}]]></subreportParameterExpression>
@@ -187,9 +183,6 @@
 				<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
 					<subreportParameter name="REPORT_CONNECTION">
 						<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter name="isReduced">
-						<subreportParameterExpression><![CDATA[$P{isReduced}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="ExtractIdentifier">
 						<subreportParameterExpression><![CDATA[$P{ExtractIdentifier}]]></subreportParameterExpression>

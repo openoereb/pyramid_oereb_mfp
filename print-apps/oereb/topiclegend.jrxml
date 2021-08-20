@@ -7,7 +7,7 @@
 	<field name="LengthShare" class="java.lang.String"/>
 	<field name="NrOfPoints" class="java.lang.String"/>
 	<field name="SymbolRef" class="java.lang.String"/>
-	<field name="Information" class="java.lang.String"/>
+	<field name="LegendText" class="java.lang.String"/>
 	<field name="PartInPercent" class="java.lang.String"/>
 	<field name="Geom_Type" class="java.lang.String"/>
 	<detail>
@@ -34,7 +34,7 @@
 				<textElement verticalAlignment="Top">
 					<font fontName="Cadastra" size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Information}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{LegendText}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="101" y="0" width="150" height="17" uuid="0f8b4f0d-278c-4906-b608-181ff2add08e">
