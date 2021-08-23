@@ -7,7 +7,7 @@ templates:
     A4 portrait: !template
         reportTemplate: pdfextract.jrxml
         outputFilename: ${yyyyMMddhhmmss}_extract
-        pdfA: true
+        pdfA: false
         attributes:
             CreationDate: !string {}
             Signature: !string &optStr
