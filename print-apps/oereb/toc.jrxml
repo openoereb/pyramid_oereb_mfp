@@ -178,7 +178,7 @@
 					<subreportParameterExpression><![CDATA[$P{nbTocPages}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[$P{BookmarkDataSource}]]></dataSourceExpression>
-				<subreportExpression><![CDATA["tocReduced.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["tocConcernedTheme.jasper"]]></subreportExpression>
 			</subreport>
 			<textField textAdjust="StretchHeight" evaluationTime="Report">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="2" width="492" height="10" uuid="74048771-76de-4810-825e-77d4e5643dd3">
