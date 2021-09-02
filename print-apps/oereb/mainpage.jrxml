@@ -309,7 +309,7 @@
 				<textElement>
 					<font fontName="Cadastra" size="16" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$R{ReducedPublicLawRestrictionsPDFExtract}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$R{PublicLawRestrictionsPDFExtract}]]></textFieldExpression>
 			</textField>
 			<frame>
 				<reportElement x="0" y="164" width="493" height="280" uuid="3902d7cb-c85b-4b02-931d-28be7edf5696">
