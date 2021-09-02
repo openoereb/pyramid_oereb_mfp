@@ -47,7 +47,7 @@
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
-	<parameter name="RealEstate_Type" class="java.lang.String"/>
+	<parameter name="RealEstate_Type_Text" class="java.lang.String"/>
 	<parameter name="RealEstate_Canton" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
@@ -123,6 +123,9 @@
 					</subreportParameter>
 					<subreportParameter name="Footer">
 						<subreportParameterExpression><![CDATA[$P{Footer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="RealEstate_Type_Text">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_Type_Text}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="RealEstate_EGRID">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_EGRID}]]></subreportParameterExpression>
