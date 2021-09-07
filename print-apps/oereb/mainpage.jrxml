@@ -58,7 +58,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{RealEstateLabel}]]></textFieldExpression>
 			</textField>
@@ -67,7 +67,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_Number}]]></textFieldExpression>
 			</textField>
@@ -115,7 +115,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{MunicipalityLabel}]]></textFieldExpression>
 			</textField>
@@ -133,7 +133,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{RealEstateTypeLabel}]]></textFieldExpression>
 			</textField>
@@ -150,7 +150,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{EGRID}]]></textFieldExpression>
 			</textField>
@@ -161,7 +161,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_Municipality} +" (" +$P{RealEstate_FosNr}+")"]]></textFieldExpression>
 			</textField>
@@ -178,7 +178,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BaseDataLabel}]]></textFieldExpression>
 			</textField>
@@ -189,7 +189,7 @@
 					<printWhenExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} == false]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="html">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_LandRegistryArea}]]></textFieldExpression>
 			</textField>
@@ -207,7 +207,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PropertyAreaLabel}]]></textFieldExpression>
 			</textField>
@@ -218,7 +218,7 @@
 					<printWhenExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister}]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="html">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_LandRegistryArea}]]></textFieldExpression>
 			</textField>
@@ -237,7 +237,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CadastreLabel}]]></textFieldExpression>
 			</textField>
@@ -249,12 +249,12 @@
 					<printWhenExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister}]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($P{RealEstate_SubunitOfLandRegister}.equals( "" )) ? $R{NoneGiven} : $P{RealEstate_SubunitOfLandRegister}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="637" width="493" height="17" uuid="e76937fd-554b-4f00-8ffd-90b86cef8a09">
+				<reportElement x="0" y="631" width="493" height="17" uuid="e76937fd-554b-4f00-8ffd-90b86cef8a09">
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -267,7 +267,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CreationDateLabel}]]></textFieldExpression>
 			</textField>
@@ -277,7 +277,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_Type_Text}]]></textFieldExpression>
 			</textField>
@@ -287,7 +287,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_EGRID}]]></textFieldExpression>
 			</textField>
@@ -297,22 +297,22 @@
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{BaseData}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="193" y="637" width="300" height="17" uuid="80f1e41d-de38-4d0b-a5d3-bb27e4c0945e">
+				<reportElement x="193" y="631" width="300" height="17" uuid="80f1e41d-de38-4d0b-a5d3-bb27e4c0945e">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{CreationDate}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="620" width="493" height="17" uuid="0f93a209-d84d-40fb-bf93-7e32ab58897f">
+				<reportElement x="0" y="614" width="493" height="17" uuid="0f93a209-d84d-40fb-bf93-7e32ab58897f">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -324,29 +324,30 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PDFExtractIdLabel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="193" y="620" width="300" height="17" uuid="d885e18b-7990-42da-b16f-065d96799b95">
+				<reportElement x="193" y="614" width="300" height="17" uuid="d885e18b-7990-42da-b16f-065d96799b95">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{ExtractIdentifier}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement x="0" y="85" width="493" height="65" uuid="b988c468-a5ad-430c-89da-c7c949f88426">
+				<reportElement x="0" y="82" width="450" height="65" uuid="b988c468-a5ad-430c-89da-c7c949f88426">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Cadastra" size="16" isBold="true"/>
+					<font fontName="Cadastra" size="18" isBold="true"/>
+					<paragraph lineSpacingSize="21.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PublicLawRestrictionsPDFExtract}]]></textFieldExpression>
 			</textField>
@@ -390,7 +391,7 @@
 				<subreportExpression><![CDATA[$P{northArrowSubReport}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="0" y="654" width="493" height="17" uuid="31fad4c5-0743-461e-bfd0-26f16b41fc16">
+				<reportElement x="0" y="648" width="493" height="17" uuid="31fad4c5-0743-461e-bfd0-26f16b41fc16">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -403,19 +404,17 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ResponsibleAuthorityLabel}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="0" y="654" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb">
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-				</reportElement>
+				<reportElement x="0" y="648" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb"/>
 				<box>
 					<bottomPen lineWidth="0.2"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Cadastra" size="9" isBold="false"/>
+					<font fontName="Cadastra" size="8" isBold="false"/>
 					<paragraph leftIndent="192"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{PLRCadastreAuthority_Name}+'\n'+$P{PLRCadastreAuthority_Street} +' '+$P{PLRCadastreAuthority_Number}+'\n'+$P{PLRCadastreAuthority_PostalCode}+' '+$P{PLRCadastreAuthority_City}]]></textFieldExpression>
