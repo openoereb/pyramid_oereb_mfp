@@ -33,6 +33,7 @@
 	<parameter name="RealEstate_FosNr" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
+	<parameter name="BaseData" class="java.lang.String"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="mapSubReport" class="java.lang.String"/>
@@ -165,11 +166,10 @@
 				<textFieldExpression><![CDATA[$P{RealEstate_Municipality} +" (" +$P{RealEstate_FosNr}+")"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="540" width="493" height="17" uuid="22ad5f4f-d1eb-4eef-ad76-4458ea1734df">
+				<reportElement x="0" y="574" width="493" height="17" uuid="22ad5f4f-d1eb-4eef-ad76-4458ea1734df">
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-					<printWhenExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} == false]]></printWhenExpression>
 				</reportElement>
 				<box bottomPadding="1">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -180,7 +180,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Cadastra" size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$R{PropertyAreaLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$R{BaseDataLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="193" y="540" width="300" height="17" uuid="c4b72298-a4f3-4641-8a67-e39b309c492c">
@@ -254,7 +254,7 @@
 				<textFieldExpression><![CDATA[($P{RealEstate_SubunitOfLandRegister}.equals( "" )) ? $R{NoneGiven} : $P{RealEstate_SubunitOfLandRegister}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="620" width="493" height="17" uuid="e76937fd-554b-4f00-8ffd-90b86cef8a09">
+				<reportElement x="0" y="637" width="493" height="17" uuid="e76937fd-554b-4f00-8ffd-90b86cef8a09">
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -276,7 +276,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
-				<textElement verticalAlignment="Middle">
+				<textElement verticalAlignment="Middle" markup="styled">
 					<font fontName="Cadastra" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_Type_Text}]]></textFieldExpression>
@@ -291,8 +291,18 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RealEstate_EGRID}]]></textFieldExpression>
 			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="574" width="300" height="17" uuid="cf0c5b01-a2a9-4c4f-84f5-c677600e053c">
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Cadastra" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BaseData}]]></textFieldExpression>
+			</textField>
 			<textField>
-				<reportElement x="193" y="620" width="300" height="17" uuid="80f1e41d-de38-4d0b-a5d3-bb27e4c0945e">
+				<reportElement x="193" y="637" width="300" height="17" uuid="80f1e41d-de38-4d0b-a5d3-bb27e4c0945e">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
@@ -302,7 +312,7 @@
 				<textFieldExpression><![CDATA[$P{CreationDate}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="603" width="493" height="17" uuid="0f93a209-d84d-40fb-bf93-7e32ab58897f">
+				<reportElement x="0" y="620" width="493" height="17" uuid="0f93a209-d84d-40fb-bf93-7e32ab58897f">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -319,7 +329,7 @@
 				<textFieldExpression><![CDATA[$R{PDFExtractIdLabel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="193" y="603" width="300" height="17" uuid="d885e18b-7990-42da-b16f-065d96799b95">
+				<reportElement x="193" y="620" width="300" height="17" uuid="d885e18b-7990-42da-b16f-065d96799b95">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
@@ -380,7 +390,7 @@
 				<subreportExpression><![CDATA[$P{northArrowSubReport}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="0" y="637" width="493" height="17" uuid="31fad4c5-0743-461e-bfd0-26f16b41fc16">
+				<reportElement x="0" y="654" width="493" height="17" uuid="31fad4c5-0743-461e-bfd0-26f16b41fc16">
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -398,7 +408,7 @@
 				<textFieldExpression><![CDATA[$R{ResponsibleAuthorityLabel}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="0" y="637" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb">
+				<reportElement x="0" y="654" width="493" height="38" uuid="665204be-fbc2-4efd-9280-8c24a0498dbb">
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 				</reportElement>
 				<box>

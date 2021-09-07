@@ -178,6 +178,9 @@
 					<subreportParameter name="CertificationAtWeb">
 						<subreportParameterExpression><![CDATA[$P{CertificationAtWeb}]]></subreportParameterExpression>
 					</subreportParameter>
+					<subreportParameter name="BaseData">
+						<subreportParameterExpression><![CDATA[$P{BaseData}]]></subreportParameterExpression>
+					</subreportParameter>
 					<subreportExpression><![CDATA["mainpage.jasper"]]></subreportExpression>
 				</p:subreportPart>
 			</part>
