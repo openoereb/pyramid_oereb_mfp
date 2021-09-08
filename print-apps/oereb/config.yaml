@@ -48,7 +48,7 @@ templates:
             QRCodeRef: *optStr
             GeneralInformation: !string #/definitions/MultilingualMText
                 default: 'Disclaimer'
-            BaseData: !string {} #/definitions/MultilingualMText
+            UpdateDateOS: !string {}
             Glossary: !datasource
                 default:
                   - Title: 'No term'
