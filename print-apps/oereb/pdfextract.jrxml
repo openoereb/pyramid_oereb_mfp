@@ -36,7 +36,10 @@
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
 	<parameter name="GeneralInformation" class="java.lang.String"/>
-	<parameter name="ExclusionOfLiabilityDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="DisclaimerGrundbuch_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerGrundbuch_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerKbS_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerKbS_Content" class="java.lang.String"/>
 	<parameter name="ConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="NotConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ThemeWithoutDataDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
@@ -247,11 +250,20 @@
 					<subreportParameter name="ThemeWithoutDataDataSource">
 						<subreportParameterExpression><![CDATA[$P{ThemeWithoutDataDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="ExclusionOfLiabilityDataSource">
-						<subreportParameterExpression><![CDATA[$P{ExclusionOfLiabilityDataSource}]]></subreportParameterExpression>
-					</subreportParameter>
 					<subreportParameter name="GeneralInformation">
 						<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerGrundbuch_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerGrundbuch_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerGrundbuch_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerGrundbuch_Content}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerKbS_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerKbS_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerKbS_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerKbS_Content}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="UpdateDateOS">
 						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
