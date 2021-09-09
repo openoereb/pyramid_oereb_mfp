@@ -157,8 +157,8 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9" isBold="true"/>
-					<paragraph spacingAfter="3"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
+					<paragraph lineSpacingSize="11.0" spacingAfter="3"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} && !$P{RealEstate_SubunitOfLandRegister}.equals("")? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
 			</textField>
@@ -192,7 +192,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="7" isBold="true"/>
+					<font fontName="Cadastra" size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{ConcernedThemeDataSource} instanceof net.sf.jasperreports.engine.JREmptyDataSource ? $R{NoPLR} : $R{TOCPageLabel}]]></textFieldExpression>
 			</textField>
@@ -208,7 +208,8 @@
 					<bottomPen lineWidth="0.2"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
+					<paragraph lineSpacingSize="11.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Topicsnotaffectingtherealestate}]]></textFieldExpression>
 			</textField>
@@ -236,8 +237,8 @@
 					<bottomPen lineWidth="0.2"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9" isBold="true"/>
-					<paragraph spacingAfter="10"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
+					<paragraph lineSpacingSize="11.0" spacingAfter="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Topicswithoutdata}]]></textFieldExpression>
 			</textField>
@@ -270,6 +271,7 @@
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="6"/>
+					<paragraph lineSpacingSize="11.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{GeneralInformation}]]></textFieldExpression>
 			</textField>
@@ -282,6 +284,7 @@
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="6" isBold="true"/>
+					<paragraph lineSpacingSize="8.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{GeneralInformationLabel}]]></textFieldExpression>
 			</textField>
