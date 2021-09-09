@@ -48,7 +48,7 @@ templates:
             QRCodeRef: *optStr
             GeneralInformation: !string #/definitions/MultilingualMText
                 default: 'Disclaimer'
-            BaseData: !string {} #/definitions/MultilingualMText
+            UpdateDateOS: !string {}
             Glossary: !datasource
                 default:
                   - Title: 'No term'
@@ -59,7 +59,7 @@ templates:
             RealEstate_Number: !string {}
             RealEstate_IdentDN: !string {}
             RealEstate_EGRID: !string {}
-            RealEstate_Type: !string {}
+            RealEstate_Type_Text: !string {}
             RealEstate_Canton: !string {}
             RealEstate_Municipality: !string {}
             RealEstate_SubunitOfLandRegister: *optStr

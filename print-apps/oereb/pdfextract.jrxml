@@ -31,7 +31,7 @@
 	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
-	<parameter name="BaseData" class="java.lang.String"/>
+	<parameter name="UpdateDateOS" class="java.lang.String"/>
 	<parameter name="mapSubReport" class="java.lang.String"/>
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
@@ -47,7 +47,7 @@
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
-	<parameter name="RealEstate_Type" class="java.lang.String"/>
+	<parameter name="RealEstate_Type_Text" class="java.lang.String"/>
 	<parameter name="RealEstate_Canton" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
@@ -124,6 +124,9 @@
 					<subreportParameter name="Footer">
 						<subreportParameterExpression><![CDATA[$P{Footer}]]></subreportParameterExpression>
 					</subreportParameter>
+					<subreportParameter name="RealEstate_Type_Text">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_Type_Text}]]></subreportParameterExpression>
+					</subreportParameter>
 					<subreportParameter name="RealEstate_EGRID">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_EGRID}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -174,6 +177,9 @@
 					</subreportParameter>
 					<subreportParameter name="CertificationAtWeb">
 						<subreportParameterExpression><![CDATA[$P{CertificationAtWeb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="UpdateDateOS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportExpression><![CDATA["mainpage.jasper"]]></subreportExpression>
 				</p:subreportPart>
@@ -247,8 +253,8 @@
 					<subreportParameter name="GeneralInformation">
 						<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="BaseData">
-						<subreportParameterExpression><![CDATA[$P{BaseData}]]></subreportParameterExpression>
+					<subreportParameter name="UpdateDateOS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="REPORT_DATA_SOURCE">
 						<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></subreportParameterExpression>
