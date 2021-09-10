@@ -99,7 +99,6 @@ templates:
                     Lawstatus_Code: *optStr
                     Lawstatus_Text: *optStr #/definitions/LocalisedText
                     Symbol: *optStr
-                    legend: !string {}
                     map: !map
                         maxDpi: 254
                         dpiSuggestions: [254]
