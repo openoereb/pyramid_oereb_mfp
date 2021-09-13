@@ -6,8 +6,8 @@
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="GeneralInformation" class="java.lang.String"/>
 	<parameter name="GeneralInformationLabel" class="java.lang.String"/>
-	<parameter name="DisclaimerGrundbuch_Title" class="java.lang.String"/>
-	<parameter name="DisclaimerGrundbuch_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<title>
 		<band height="47">
@@ -48,7 +48,7 @@
 				<textElement>
 					<font fontName="Cadastra" size="6" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{DisclaimerGrundbuch_Title}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="17" width="230" height="38" isPrintWhenDetailOverflows="true" uuid="688222aa-3250-4873-95e8-a6485dce6c9f">
@@ -58,7 +58,7 @@
 				<textElement>
 					<font fontName="Cadastra" size="6"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{DisclaimerGrundbuch_Content}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>

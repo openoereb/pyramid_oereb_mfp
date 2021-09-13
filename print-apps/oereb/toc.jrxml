@@ -63,10 +63,10 @@
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
 	<parameter name="GeneralInformation" class="java.lang.String"/>
-	<parameter name="DisclaimerGrundbuch_Title" class="java.lang.String"/>
-	<parameter name="DisclaimerGrundbuch_Content" class="java.lang.String"/>
-	<parameter name="DisclaimerKbS_Title" class="java.lang.String"/>
-	<parameter name="DisclaimerKbS_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Content" class="java.lang.String"/>
 	<parameter name="ConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="NotConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ThemeWithoutDataDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
@@ -275,7 +275,7 @@
 				<textElement markup="html">
 					<font size="6" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{DisclaimerKbS_Title}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DisclaimerPollutedSites_Title}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" stretchType="ContainerBottom" isPrintRepeatedValues="false" x="260" y="11" width="233" height="122" isRemoveLineWhenBlank="true" uuid="1a5f9282-dd05-475b-81b6-41a59bf0c339">
@@ -291,7 +291,7 @@
 				<textElement textAlignment="Left" markup="html">
 					<font size="6" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{DisclaimerKbS_Content}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DisclaimerPollutedSites_Content}]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement x="0" y="0" width="252" height="155" uuid="88178e0e-d18d-473b-8c4b-6548d2154fb1">
@@ -304,11 +304,11 @@
 				<subreportParameter name="GeneralInformationLabel">
 					<subreportParameterExpression><![CDATA[$R{GeneralInformationLabel}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="DisclaimerGrundbuch_Title">
-					<subreportParameterExpression><![CDATA[$P{DisclaimerGrundbuch_Title}]]></subreportParameterExpression>
+				<subreportParameter name="DisclaimerLandRegister_Title">
+					<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="DisclaimerGrundbuch_Content">
-					<subreportParameterExpression><![CDATA[$P{DisclaimerGrundbuch_Content}]]></subreportParameterExpression>
+				<subreportParameter name="DisclaimerLandRegister_Content">
+					<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["general_info_and_disclaimer.jasper"]]></subreportExpression>
 			</subreport>

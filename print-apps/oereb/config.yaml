@@ -161,10 +161,10 @@ templates:
                         attributes:
                             Name: !string {}
                             OfficeAtWeb: *optStr
-            DisclaimerGrundbuch_Title: !string {}
-            DisclaimerGrundbuch_Content: !string {}
-            DisclaimerKbS_Title: !string {}
-            DisclaimerKbS_Content: !string {}
+            DisclaimerLandRegister_Title: !string {}
+            DisclaimerLandRegister_Content: !string {}
+            DisclaimerPollutedSites_Title: !string {}
+            DisclaimerPollutedSites_Content: !string {}
             PLRCadastreAuthority_Name: !string {} #/definitions/MultilingualText
             PLRCadastreAuthority_OfficeAtWeb: *optStr #/definitions/WebReference
             PLRCadastreAuthority_UID: *optStr #/definitions/UID
