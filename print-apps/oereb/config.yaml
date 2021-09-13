@@ -161,11 +161,10 @@ templates:
                         attributes:
                             Name: !string {}
                             OfficeAtWeb: *optStr
-            ExclusionOfLiability: !datasource
-                default: []
-                attributes:
-                    Title: !string {} #/definitions/MultilingualText
-                    Content: !string {} #/definitions/MultilingualText
+            DisclaimerLandRegister_Title: !string {}
+            DisclaimerLandRegister_Content: !string {}
+            DisclaimerPollutedSites_Title: !string {}
+            DisclaimerPollutedSites_Content: !string {}
             PLRCadastreAuthority_Name: !string {} #/definitions/MultilingualText
             PLRCadastreAuthority_OfficeAtWeb: *optStr #/definitions/WebReference
             PLRCadastreAuthority_UID: *optStr #/definitions/UID
@@ -328,9 +327,3 @@ templates:
                 RealEstate_RestrictionOnLandownership: datasource
             outputMapper:
                 jrDataSource: RealEstate_RestrictionOnLandownershipDataSource
-        - !createDataSource
-            processors: []
-            inputMapper:
-                ExclusionOfLiability: datasource
-            outputMapper:
-                jrDataSource: ExclusionOfLiabilityDataSource

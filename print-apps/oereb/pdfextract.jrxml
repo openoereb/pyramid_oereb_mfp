@@ -36,7 +36,10 @@
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
 	<parameter name="GeneralInformation" class="java.lang.String"/>
-	<parameter name="ExclusionOfLiabilityDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Content" class="java.lang.String"/>
 	<parameter name="ConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="NotConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ThemeWithoutDataDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
@@ -247,11 +250,20 @@
 					<subreportParameter name="ThemeWithoutDataDataSource">
 						<subreportParameterExpression><![CDATA[$P{ThemeWithoutDataDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="ExclusionOfLiabilityDataSource">
-						<subreportParameterExpression><![CDATA[$P{ExclusionOfLiabilityDataSource}]]></subreportParameterExpression>
-					</subreportParameter>
 					<subreportParameter name="GeneralInformation">
 						<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerLandRegister_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerLandRegister_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerPollutedSites_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerPollutedSites_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Content}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="UpdateDateOS">
 						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
