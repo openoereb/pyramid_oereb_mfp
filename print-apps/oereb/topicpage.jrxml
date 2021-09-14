@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Topicpage" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="493" leftMargin="51" rightMargin="51" topMargin="28" bottomMargin="20" uuid="3664412a-b6c6-4e1c-8c14-6c4af7e6efc2">
 	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -82,8 +82,7 @@
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
 	<field name="mapSubReport" class="java.lang.String"/>
 	<field name="Theme_Text" class="java.lang.String"/>
-	<field name="SubTheme" class="java.lang.String"/>
-	<field name="Split_SubTheme" class="java.lang.Boolean"/>
+	<field name="Lawstatus_Text" class="java.lang.String"/>
 	<field name="Geom_Type" class="java.lang.String"/>
 	<field name="ResponsibleOffice_Name" class="java.lang.String"/>
 	<field name="ResponsibleOffice_OfficeAtWeb" class="java.lang.String"/>
@@ -151,29 +150,6 @@
 	<detail>
 		<band height="385">
 			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" bookmarkLevel="1">
-				<reportElement x="0" y="28" width="493" height="22" isRemoveLineWhenBlank="true" uuid="22c80cf5-78d8-4791-9eb9-ac621df1a041">
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-				</reportElement>
-				<textElement>
-					<font size="16" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Theme_Text}]]></textFieldExpression>
-				<anchorNameExpression><![CDATA[$F{Split_SubTheme} ? ($F{Theme_Text} + ": " + $F{SubTheme}) : $F{Theme_Text}]]></anchorNameExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="0" y="50" width="493" height="18" isRemoveLineWhenBlank="true" uuid="22c80cf5-78d8-4791-9eb9-ac621df1a041">
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-				</reportElement>
-				<textElement>
-					<font size="14" isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Split_SubTheme} ? $F{SubTheme} : null]]></textFieldExpression>
-			</textField>
 			<textField>
 				<reportElement x="0" y="50" width="492" height="20" uuid="60969764-be9a-421d-bdd8-9b46e410d1f8"/>
 				<textFieldExpression><![CDATA[$P{TOC_Appendices}.put($F{Theme_Text}, new java.util.ArrayList()) instanceof String ? "" : ""]]></textFieldExpression>
@@ -253,11 +229,24 @@
 				</reportElement>
 				<subreportExpression><![CDATA[$P{northArrowSubReport}]]></subreportExpression>
 			</subreport>
+			<subreport>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="31" width="493" height="34" uuid="941eabef-ea88-4f13-91c5-54fc7bccaf24">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="Lawstatus_Text">
+					<subreportParameterExpression><![CDATA[$F{Lawstatus_Text}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Theme_Text">
+					<subreportParameterExpression><![CDATA[$F{Theme_Text}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["topicTitle.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 		<band height="19">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField isStretchWithOverflow="true">
+			<textField textAdjust="StretchHeight">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="193" height="19" isPrintInFirstWholeBand="true" uuid="8ef5ca32-4156-4f98-ba33-972d48815976">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
@@ -312,7 +301,7 @@
 		<band height="19">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="193" height="19" isPrintInFirstWholeBand="true" uuid="c7bafe02-64a5-407f-b511-dde165687582">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
@@ -473,7 +462,7 @@
 				<dataSourceExpression><![CDATA[$F{HintsDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA["legalprovision.jasper"]]></subreportExpression>
 			</subreport>
-			<textField isStretchWithOverflow="true">
+			<textField textAdjust="StretchHeight">
 				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="0" width="193" height="18" isPrintInFirstWholeBand="true" uuid="94ac5c43-32f0-4769-ba84-96a56cb660b6">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>

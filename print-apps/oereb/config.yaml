@@ -93,9 +93,6 @@ templates:
                     Geom_Type: *optStr
                     Theme_Code: *optStr
                     Theme_Text: *optStr #/definitions/LocalisedText
-                    SubTheme: *optStr
-                    Split_SubTheme: !boolean
-                        default: false
                     Lawstatus_Code: *optStr
                     Lawstatus_Text: *optStr #/definitions/LocalisedText
                     Symbol: *optStr

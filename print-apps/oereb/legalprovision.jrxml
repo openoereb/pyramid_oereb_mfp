@@ -57,6 +57,6 @@
 				<dataSourceExpression><![CDATA[$F{TextAtWebDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA["textatweb.jasper"]]></subreportExpression>
 			</subreport>
-		</band
+		</band>
 	</detail>
 </jasperReport>
