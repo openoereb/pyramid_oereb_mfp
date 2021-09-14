@@ -27,7 +27,6 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="OfficialTitle" class="java.lang.String"/>
 		<field name="Title" class="java.lang.String"/>
 		<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	</subDataset>
@@ -35,7 +34,6 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="OfficialTitle" class="java.lang.String"/>
 		<field name="Title" class="java.lang.String"/>
 		<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	</subDataset>
@@ -43,7 +41,6 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="OfficialTitle" class="java.lang.String"/>
 		<field name="Title" class="java.lang.String"/>
 		<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	</subDataset>
@@ -51,7 +48,6 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="OfficialTitle" class="java.lang.String"/>
 		<field name="Title" class="java.lang.String"/>
 		<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	</subDataset>

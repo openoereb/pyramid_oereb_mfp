@@ -133,7 +133,6 @@ templates:
                             Number: *optStr #/definitions/ArticleNumber
                             Text: *optStr #/definitions/MultilingualMText
                             Title: *optStr #/definitions/MultilingualText
-                            OfficialTitle: *optStr #/definitions/MultilingualText
                             Abbreviation: *optStr #/definitions/MultilingualText
                             OfficialNumber: *optStr
                             Canton: *optStr #/definitions/CantonCode
