@@ -2,7 +2,7 @@
 
 ``pyramid_oereb_mfp`` is an implementation of a static extract (PDF) for
 the [pyramid_oereb server](https://github.com/openoereb/pyramid_oereb)
-using [MapFish-Print](https://github.com/mapfish/mapfish-print>).
+using [MapFish-Print](https://github.com/mapfish/mapfish-print).
 
 ## Prerequisites
 Starting version [1.8.0](https://github.com/openoereb/pyramid_oereb_mfp/releases/tag/v1.8.0),

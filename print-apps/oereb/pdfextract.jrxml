@@ -29,12 +29,15 @@
 	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
-	<parameter name="BaseData" class="java.lang.String"/>
+	<parameter name="UpdateDateOS" class="java.lang.String"/>
 	<parameter name="mapSubReport" class="java.lang.String"/>
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
 	<parameter name="GeneralInformation" class="java.lang.String"/>
-	<parameter name="ExclusionOfLiabilityDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
+	<parameter name="DisclaimerPollutedSites_Content" class="java.lang.String"/>
 	<parameter name="ConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="NotConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ThemeWithoutDataDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
@@ -45,7 +48,7 @@
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
-	<parameter name="RealEstate_Type" class="java.lang.String"/>
+	<parameter name="RealEstate_Type_Text" class="java.lang.String"/>
 	<parameter name="RealEstate_Canton" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
@@ -122,6 +125,9 @@
 					<subreportParameter name="Footer">
 						<subreportParameterExpression><![CDATA[$P{Footer}]]></subreportParameterExpression>
 					</subreportParameter>
+					<subreportParameter name="RealEstate_Type_Text">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_Type_Text}]]></subreportParameterExpression>
+					</subreportParameter>
 					<subreportParameter name="RealEstate_EGRID">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_EGRID}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -172,6 +178,9 @@
 					</subreportParameter>
 					<subreportParameter name="CertificationAtWeb">
 						<subreportParameterExpression><![CDATA[$P{CertificationAtWeb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="UpdateDateOS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportExpression><![CDATA["mainpage.jasper"]]></subreportExpression>
 				</p:subreportPart>
@@ -239,14 +248,23 @@
 					<subreportParameter name="ThemeWithoutDataDataSource">
 						<subreportParameterExpression><![CDATA[$P{ThemeWithoutDataDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="ExclusionOfLiabilityDataSource">
-						<subreportParameterExpression><![CDATA[$P{ExclusionOfLiabilityDataSource}]]></subreportParameterExpression>
-					</subreportParameter>
 					<subreportParameter name="GeneralInformation">
 						<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="BaseData">
-						<subreportParameterExpression><![CDATA[$P{BaseData}]]></subreportParameterExpression>
+					<subreportParameter name="DisclaimerLandRegister_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerLandRegister_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerPollutedSites_Title">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Title}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DisclaimerPollutedSites_Content">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Content}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="UpdateDateOS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="REPORT_DATA_SOURCE">
 						<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></subreportParameterExpression>
