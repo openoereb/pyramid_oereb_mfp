@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="topicmapboxlegend" pageWidth="493" pageHeight="34" whenNoDataType="AllSectionsNoDetail" columnWidth="493" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="6477891d-f5c5-456f-a115-e91b2a2768c6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="FederalLogoRef" class="java.lang.String"/>
+	<parameter name="Theme_Text" class="java.lang.String"/>
+	<parameter name="Lawstatus_Text" class="java.lang.String"/>
+	<title>
+		<band height="20">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true" bookmarkLevel="1">
+				<reportElement stretchType="ElementGroupHeight" isPrintRepeatedValues="false" x="0" y="0" width="493" height="20" isPrintWhenDetailOverflows="true" uuid="16fcd742-e1b7-442f-8ca9-471cd50a0260">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="15" isBold="true"/>
+					<paragraph lineSpacingSize="18.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Theme_Text}]]></textFieldExpression>
+				<anchorNameExpression><![CDATA[$P{Theme_Text} + (!$P{Lawstatus_Text}.equals("") || !$P{Lawstatus_Text}.equals("Rechtskräftig") || $P{Lawstatus_Text} != null ? " (" + $P{Lawstatus_Text}+ ")" : "")]]></anchorNameExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[!$P{Lawstatus_Text}.equals("") || $P{Lawstatus_Text} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="3" width="193" height="11" isPrintInFirstWholeBand="true" uuid="67c4201f-d1f9-4452-90c8-aab1b33003de">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$P{Lawstatus_Text}.equals("") || $P{Lawstatus_Text} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Cadastra" size="8" isBold="true"/>
+					<paragraph lineSpacingSize="11.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Lawstatus_Text}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

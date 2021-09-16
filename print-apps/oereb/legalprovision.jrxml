@@ -24,21 +24,12 @@
 	<field name="TextAtWebDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="Title" class="java.lang.String"/>
 	<field name="OfficialNumber" class="java.lang.String"/>
-	<field name="OfficialTitle" class="java.lang.String"/>
 	<field name="Abbreviation" class="java.lang.String"/>
 	<detail>
 		<band height="14">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<printWhenExpression><![CDATA[$F{Title} != null || $F{OfficialTitle} != null]]></printWhenExpression>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="Reference">
-				<reportElement x="190" y="0" width="110" height="10" uuid="179b7611-a023-4e6c-bd26-1f128b45058d">
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[((ArrayList)$P{TOC_Appendices}.get($P{Theme_Text})).add($F{Title}.equals("") ? $F{OfficialTitle} : $F{Title}) ? "" : ""]]></textFieldExpression>
-				<hyperlinkReferenceExpression><![CDATA[((ArrayList)$P{TOC_Appendices}.get($P{Theme_Text})).add($F{Title}.equals("") ? $F{OfficialTitle} : $F{Title}) ? "" : ""]]></hyperlinkReferenceExpression>
-			</textField>
+			<printWhenExpression><![CDATA[$F{Title} != null]]></printWhenExpression>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true" bookmarkLevel="2">
 				<reportElement stretchType="ContainerHeight" x="0" y="0" width="300" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="114a9f86-a715-4eb3-a8a3-5b17bad23c1a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -50,7 +41,7 @@
 					<font fontName="Cadastra" size="8"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{Title}.equals("") || $F{Title} == null ? ($F{OfficialTitle}.equals("") || $F{OfficialTitle} == null ? "-" :   $F{OfficialTitle}): $F{Title}) + (($F{Abbreviation}.equals("") || $F{Abbreviation} == null) ? "" : " (" + $F{Abbreviation} + ")") + (($F{OfficialNumber}.equals("") || $F{OfficialNumber} == null) ? "" : ", " + $F{OfficialNumber})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{Title}.equals("") || $F{Title} == null ? "-": $F{Title}) + (($F{Abbreviation}.equals("") || $F{Abbreviation} == null) ? "" : " (" + $F{Abbreviation} + ")") + (($F{OfficialNumber}.equals("") || $F{OfficialNumber} == null) ? "" : ", " + $F{OfficialNumber})]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="9">
