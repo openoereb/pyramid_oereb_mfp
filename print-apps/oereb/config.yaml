@@ -46,8 +46,10 @@ templates:
             Footer: !string {}
             QRCode: *optStr
             QRCodeRef: *optStr
-            GeneralInformation: !string #/definitions/MultilingualMText
-                default: 'Disclaimer'
+            GeneralInformation: !datasource
+                default: []
+                attributes:
+                  Info: !string {}
             UpdateDateOS: !string {}
             Glossary: !datasource
                 default:
@@ -240,6 +242,12 @@ templates:
         - !createMap {}
         - !createNorthArrow {}
         - !createScalebar {}
+        - !createDataSource
+            processors: []
+            inputMapper:
+                GeneralInformation: datasource
+            outputMapper:
+                jrDataSource: GeneralInformationDataSource
         - !createDataSource
             processors: []
             inputMapper:
