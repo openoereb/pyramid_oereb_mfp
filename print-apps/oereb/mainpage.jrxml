@@ -33,7 +33,7 @@
 	<parameter name="RealEstate_MunicipalityCode" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
-	<parameter name="UpdateDateOS" class="java.lang.String"/>
+	<parameter name="UpdateDateCS" class="java.lang.String"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="mapSubReport" class="java.lang.String"/>
@@ -180,7 +180,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Cadastra" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$R{UpdateDateOSLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$R{UpdateDateCSLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="193" y="540" width="300" height="17" uuid="c4b72298-a4f3-4641-8a67-e39b309c492c">
@@ -299,7 +299,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Cadastra" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{UpdateDateOS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{UpdateDateCS}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="193" y="631" width="300" height="17" uuid="80f1e41d-de38-4d0b-a5d3-bb27e4c0945e">

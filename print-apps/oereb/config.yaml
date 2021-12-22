@@ -50,7 +50,7 @@ templates:
                 default: []
                 attributes:
                   Info: !string {}
-            UpdateDateOS: !string {}
+            UpdateDateCS: !string {}
             Glossary: !datasource
                 default:
                   - Title: 'No term'
