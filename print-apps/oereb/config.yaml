@@ -46,9 +46,11 @@ templates:
             Footer: !string {}
             QRCode: *optStr
             QRCodeRef: *optStr
-            GeneralInformation: !string #/definitions/MultilingualMText
-                default: 'Disclaimer'
-            UpdateDateOS: !string {}
+            GeneralInformation: !datasource
+                default: []
+                attributes:
+                  Info: !string {}
+            UpdateDateCS: !string {}
             Glossary: !datasource
                 default:
                   - Title: 'No term'
@@ -61,13 +63,13 @@ templates:
             RealEstate_EGRID: !string {}
             RealEstate_Type_Text: !string {}
             RealEstate_Canton: !string {}
-            RealEstate_Municipality: !string {}
+            RealEstate_MunicipalityName: !string {}
             RealEstate_SubunitOfLandRegister: *optStr
             Display_RealEstate_SubunitOfLandRegister: !boolean
                 default: true
             Display_Certification: !boolean
                 default: true
-            RealEstate_FosNr: !string {}
+            RealEstate_MunicipalityCode: !string {}
             RealEstate_MetadataOfGeographicalBaseData: *optStr
             RealEstate_LandRegistryArea: !string {}
             RealEstate_RestrictionOnLandownership: !datasource
@@ -240,6 +242,12 @@ templates:
         - !createMap {}
         - !createNorthArrow {}
         - !createScalebar {}
+        - !createDataSource
+            processors: []
+            inputMapper:
+                GeneralInformation: datasource
+            outputMapper:
+                jrDataSource: GeneralInformationDataSource
         - !createDataSource
             processors: []
             inputMapper:

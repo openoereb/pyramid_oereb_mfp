@@ -6,7 +6,7 @@
 	<parameter name="FederalLogoRef" class="java.lang.String"/>
 	<parameter name="CantonalLogoRef" class="java.lang.String"/>
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
-	<parameter name="RealEstate_Municipality" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<title>
@@ -44,7 +44,7 @@
 				<textElement textAlignment="Center">
 					<font fontName="Cadastra" size="6"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{RealEstate_Municipality}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center">
 				<reportElement x="394" y="0" width="99" height="28" uuid="ea303a21-bb2b-44f8-8be7-76759027ac58">

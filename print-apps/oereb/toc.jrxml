@@ -62,7 +62,7 @@
 	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
-	<parameter name="GeneralInformation" class="java.lang.String"/>
+	<parameter name="GeneralInformationDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
 	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
 	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
@@ -74,8 +74,8 @@
 	<parameter name="QRCodeRef" class="java.lang.String"/>
 	<parameter name="RealEstate_Number" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
-	<parameter name="RealEstate_Municipality" class="java.lang.String"/>
-	<parameter name="RealEstate_FosNr" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityCode" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="TOC_Appendices" class="java.util.Map"/>
@@ -103,8 +103,8 @@
 				<subreportParameter name="LogoPLRCadastreRef">
 					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="RealEstate_Municipality">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				<subreportParameter name="RealEstate_MunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["titleAllLogos.jasper"]]></subreportExpression>
 			</subreport>
@@ -127,8 +127,8 @@
 				<subreportParameter name="LogoPLRCadastreRef">
 					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="RealEstate_Municipality">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				<subreportParameter name="RealEstate_MunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["titleNoCantonLogo.jasper"]]></subreportExpression>
 			</subreport>
@@ -163,7 +163,7 @@
 					<font fontName="Cadastra" size="8" isBold="true"/>
 					<paragraph lineSpacingSize="11.0" spacingAfter="3"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} && !$P{RealEstate_SubunitOfLandRegister}.equals("")? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_Municipality},"")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} && !$P{RealEstate_SubunitOfLandRegister}.equals("")? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_MunicipalityName}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_MunicipalityName},"")]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="29">
@@ -298,9 +298,6 @@
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
-				<subreportParameter name="GeneralInformation">
-					<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="GeneralInformationLabel">
 					<subreportParameterExpression><![CDATA[$R{GeneralInformationLabel}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -310,6 +307,7 @@
 				<subreportParameter name="DisclaimerLandRegister_Content">
 					<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></subreportParameterExpression>
 				</subreportParameter>
+                <dataSourceExpression><![CDATA[$P{GeneralInformationDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA["general_info_and_disclaimer.jasper"]]></subreportExpression>
 			</subreport>
 		</band>

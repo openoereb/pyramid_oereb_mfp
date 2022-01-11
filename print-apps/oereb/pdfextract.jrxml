@@ -31,11 +31,11 @@
 	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
-	<parameter name="UpdateDateOS" class="java.lang.String"/>
+	<parameter name="UpdateDateCS" class="java.lang.String"/>
 	<parameter name="mapSubReport" class="java.lang.String"/>
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
-	<parameter name="GeneralInformation" class="java.lang.String"/>
+	<parameter name="GeneralInformationDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
 	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
 	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
@@ -46,7 +46,7 @@
 	<parameter name="QRCode" class="java.lang.String"/>
 	<parameter name="QRCodeRef" class="java.lang.String"/>
 	<parameter name="RealEstate_IdentDN" class="java.lang.String"/>
-	<parameter name="RealEstate_Municipality" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
@@ -55,7 +55,7 @@
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="RealEstate_Number" class="java.lang.String"/>
-	<parameter name="RealEstate_FosNr" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityCode" class="java.lang.String"/>
 	<parameter name="RealEstate_RestrictionOnLandownershipDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="GlossaryDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="Certification" class="java.lang.String"/>
@@ -139,11 +139,11 @@
 					<subreportParameter name="RealEstate_IdentDN">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_IdentDN}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="RealEstate_FosNr">
-						<subreportParameterExpression><![CDATA[$P{RealEstate_FosNr}]]></subreportParameterExpression>
+					<subreportParameter name="RealEstate_MunicipalityCode">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityCode}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="RealEstate_Municipality">
-						<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+					<subreportParameter name="RealEstate_MunicipalityName">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="RealEstate_SubunitOfLandRegister">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
@@ -181,8 +181,8 @@
 					<subreportParameter name="CertificationAtWeb">
 						<subreportParameterExpression><![CDATA[$P{CertificationAtWeb}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="UpdateDateOS">
-						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
+					<subreportParameter name="UpdateDateCS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateCS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportExpression><![CDATA["mainpage.jasper"]]></subreportExpression>
 				</p:subreportPart>
@@ -226,8 +226,8 @@
 					<subreportParameter name="LogoPLRCadastreRef">
 						<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="RealEstate_Municipality">
-						<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+					<subreportParameter name="RealEstate_MunicipalityName">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="RealEstate_SubunitOfLandRegister">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
@@ -250,8 +250,8 @@
 					<subreportParameter name="ThemeWithoutDataDataSource">
 						<subreportParameterExpression><![CDATA[$P{ThemeWithoutDataDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="GeneralInformation">
-						<subreportParameterExpression><![CDATA[$P{GeneralInformation}]]></subreportParameterExpression>
+					<subreportParameter name="GeneralInformationDataSource">
+						<subreportParameterExpression><![CDATA[$P{GeneralInformationDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="DisclaimerLandRegister_Title">
 						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></subreportParameterExpression>
@@ -265,8 +265,8 @@
 					<subreportParameter name="DisclaimerPollutedSites_Content">
 						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Content}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="UpdateDateOS">
-						<subreportParameterExpression><![CDATA[$P{UpdateDateOS}]]></subreportParameterExpression>
+					<subreportParameter name="UpdateDateCS">
+						<subreportParameterExpression><![CDATA[$P{UpdateDateCS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="REPORT_DATA_SOURCE">
 						<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></subreportParameterExpression>
@@ -329,8 +329,8 @@
 					<subreportParameter name="Footer">
 						<subreportParameterExpression><![CDATA[$P{Footer}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="RealEstate_Municipality">
-						<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+					<subreportParameter name="RealEstate_MunicipalityName">
+						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="GlossaryDataSource">
 						<subreportParameterExpression><![CDATA[$P{GlossaryDataSource}]]></subreportParameterExpression>
@@ -392,8 +392,8 @@
 				<subreportParameter name="Footer">
 					<subreportParameterExpression><![CDATA[$P{Footer}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="RealEstate_Municipality">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				<subreportParameter name="RealEstate_MunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="mapSubReport">
 					<subreportParameterExpression><![CDATA[$P{mapSubReport}]]></subreportParameterExpression>

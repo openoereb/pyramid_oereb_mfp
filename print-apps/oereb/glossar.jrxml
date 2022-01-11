@@ -17,7 +17,7 @@
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastre" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
-	<parameter name="RealEstate_Municipality" class="java.lang.String"/>
+	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="GlossaryDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<pageHeader>
 		<band height="55">
@@ -39,8 +39,8 @@
 				<subreportParameter name="LogoPLRCadastreRef">
 					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="RealEstate_Municipality">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				<subreportParameter name="RealEstate_MunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["titleAllLogos.jasper"]]></subreportExpression>
 			</subreport>
@@ -63,8 +63,8 @@
 				<subreportParameter name="LogoPLRCadastreRef">
 					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="RealEstate_Municipality">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_Municipality}]]></subreportParameterExpression>
+				<subreportParameter name="RealEstate_MunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["titleNoCantonLogo.jasper"]]></subreportExpression>
 			</subreport>
