@@ -160,8 +160,11 @@ templates:
                             OfficeAtWeb: *optStr
             DisclaimerLandRegister_Title: !string {}
             DisclaimerLandRegister_Content: !string {}
-            DisclaimerPollutedSites_Title: !string {}
-            DisclaimerPollutedSites_Content: !string {}
+            Disclaimer: !datasource
+                default: []
+                attributes:
+                    Content: !string {}
+                    Title: !string {}
             PLRCadastreAuthority_Name: !string {} #/definitions/MultilingualText
             PLRCadastreAuthority_OfficeAtWeb: *optStr #/definitions/WebReference
             PLRCadastreAuthority_UID: *optStr #/definitions/UID
@@ -272,6 +275,12 @@ templates:
                 Glossary: datasource
             outputMapper:
                 jrDataSource: GlossaryDataSource
+        - !createDataSource
+            processors: []
+            inputMapper:
+                Disclaimer: datasource
+            outputMapper:
+                jrDataSource: DisclaimerDataSource
         - !createDataSource
             copyAttributes: [overlayLayers, style, features]
             processors:
