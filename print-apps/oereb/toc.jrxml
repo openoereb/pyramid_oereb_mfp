@@ -277,7 +277,7 @@
 				<subreportExpression><![CDATA["general_info_and_disclaimer.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement stretchType="ContainerBottom" x="252" y="0" width="240" height="21" uuid="547dff1a-158f-43e9-a578-cd61513d0e62">
+				<reportElement stretchType="ContainerBottom" x="252" y="0" width="240" height="21" isPrintInFirstWholeBand="true" uuid="547dff1a-158f-43e9-a578-cd61513d0e62">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
