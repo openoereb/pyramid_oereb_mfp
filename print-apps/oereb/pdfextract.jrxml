@@ -38,8 +38,7 @@
 	<parameter name="GeneralInformationDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
 	<parameter name="DisclaimerLandRegister_Content" class="java.lang.String"/>
-	<parameter name="DisclaimerPollutedSites_Title" class="java.lang.String"/>
-	<parameter name="DisclaimerPollutedSites_Content" class="java.lang.String"/>
+	<parameter name="DisclaimerDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="NotConcernedThemeDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="ThemeWithoutDataDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
@@ -259,11 +258,8 @@
 					<subreportParameter name="DisclaimerLandRegister_Content">
 						<subreportParameterExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="DisclaimerPollutedSites_Title">
-						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Title}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter name="DisclaimerPollutedSites_Content">
-						<subreportParameterExpression><![CDATA[$P{DisclaimerPollutedSites_Content}]]></subreportParameterExpression>
+					<subreportParameter name="DisclaimerDataSource">
+						<subreportParameterExpression><![CDATA[$P{DisclaimerDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="UpdateDateCS">
 						<subreportParameterExpression><![CDATA[$P{UpdateDateCS}]]></subreportParameterExpression>

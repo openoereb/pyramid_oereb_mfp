@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="topicmapboxlegend" pageWidth="252" pageHeight="155" whenNoDataType="AllSectionsNoDetail" columnWidth="252" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6477891d-f5c5-456f-a115-e91b2a2768c6">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="topicmapboxlegend" pageWidth="240" pageHeight="39" whenNoDataType="AllSectionsNoDetail" columnWidth="240" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6477891d-f5c5-456f-a115-e91b2a2768c6">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
 	<style name="Default" isDefault="true" fontName="Cadastra" fontSize="8"/>
 	<parameter name="GeneralInformationLabel" class="java.lang.String"/>
 	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
@@ -10,23 +11,26 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<field name="Info" class="java.lang.String"/>
 	<detail>
-		<band height="47">
+		<band height="16">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="11" width="230" height="36" isPrintWhenDetailOverflows="true" uuid="d8faf59a-0317-4cf0-9ffd-49759fee539e">
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="8" width="240" height="8" isPrintWhenDetailOverflows="true" uuid="d8faf59a-0317-4cf0-9ffd-49759fee539e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="6"/>
-					<paragraph lineSpacingSize="11.0"/>
+					<paragraph lineSpacingSize="8.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Info}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement x="0" y="0" width="230" height="11" isPrintWhenDetailOverflows="true" uuid="361fca0e-48b8-4d23-863d-4cdb82c500a2">
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				<reportElement x="0" y="0" width="240" height="8" isPrintWhenDetailOverflows="true" uuid="361fca0e-48b8-4d23-863d-4cdb82c500a2">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font fontName="Cadastra" size="6" isBold="true"/>
@@ -35,15 +39,13 @@
 				<textFieldExpression><![CDATA[$P{GeneralInformationLabel}]]></textFieldExpression>
 			</textField>
 		</band>
-	</detail>
-	<pageFooter>
-		<band height="55">
+		<band height="22">
 			<textField>
-				<reportElement x="0" y="6" width="230" height="11" uuid="b1952a7b-2006-4a21-bf98-8162489e3bac">
-					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				<reportElement x="0" y="6" width="240" height="8" uuid="b1952a7b-2006-4a21-bf98-8162489e3bac">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
-					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="6" isBold="true"/>
@@ -51,15 +53,17 @@
 				<textFieldExpression><![CDATA[$P{DisclaimerLandRegister_Title}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="17" width="230" height="38" isPrintWhenDetailOverflows="true" uuid="688222aa-3250-4873-95e8-a6485dce6c9f">
-					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				<reportElement positionType="Float" stretchType="ContainerBottom" x="0" y="14" width="240" height="8" isPrintWhenDetailOverflows="true" uuid="688222aa-3250-4873-95e8-a6485dce6c9f">
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Cadastra" size="6"/>
+					<paragraph lineSpacingSize="8.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DisclaimerLandRegister_Content}]]></textFieldExpression>
 			</textField>
 		</band>
-	</pageFooter>
+	</detail>
 </jasperReport>
