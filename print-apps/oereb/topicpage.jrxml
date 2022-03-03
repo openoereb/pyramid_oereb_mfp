@@ -318,7 +318,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Cadastra" size="8.5" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BBOXLegendLabel}]]></textFieldExpression>
 			</textField>
@@ -377,7 +377,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Cadastra" size="8.5" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{LegalProvisionLabel}]]></textFieldExpression>
 			</textField>
@@ -428,7 +428,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Cadastra" size="8.5" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{LegalBasesLabel}]]></textFieldExpression>
 			</textField>
@@ -479,7 +479,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Cadastra" size="8.5" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{HintsLabel}]]></textFieldExpression>
 			</textField>
@@ -525,7 +525,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Cadastra" size="8.5" isBold="true"/>
+					<font fontName="Cadastra" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CompetentAuthorityLabel}]]></textFieldExpression>
 			</textField>
