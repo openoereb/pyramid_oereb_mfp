@@ -60,7 +60,8 @@ templates:
                     Content: !string {} #/definitions/MultilingualText
             RealEstate_Number: !string {}
             RealEstate_IdentDN: !string {}
-            RealEstate_EGRID: !string {}
+            RealEstate_EGRID: !string
+                default: None
             RealEstate_Type_Text: !string {}
             RealEstate_Canton: !string {}
             RealEstate_MunicipalityName: !string {}
