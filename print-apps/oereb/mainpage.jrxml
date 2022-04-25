@@ -255,7 +255,6 @@
 			<subreport>
 				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="5593ce53-3995-4d63-8aaa-ed11b332a8a6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[$P{PrintCantonLogo}]]></printWhenExpression>
 				</reportElement>
 				<subreportParameter name="FederalLogoRef">
 					<subreportParameterExpression><![CDATA[$P{FederalLogoRef}]]></subreportParameterExpression>
@@ -272,31 +271,7 @@
 				<subreportParameter name="RealEstate_MunicipalityName">
 					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportExpression><![CDATA["titleAllLogos.jasper"]]></subreportExpression>
-			</subreport>
-			<subreport>
-				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="8d02619a-351b-4959-914a-8765f2f8dd02">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<printWhenExpression><![CDATA[!$P{PrintCantonLogo}]]></printWhenExpression>
-				</reportElement>
-				<subreportParameter name="FederalLogoRef">
-					<subreportParameterExpression><![CDATA[$P{FederalLogoRef}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="CantonalLogoRef">
-					<subreportParameterExpression><![CDATA[$P{CantonalLogoRef}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="MunicipalityLogoRef">
-					<subreportParameterExpression><![CDATA[$P{MunicipalityLogoRef}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="LogoPLRCadastreRef">
-					<subreportParameterExpression><![CDATA[$P{LogoPLRCadastreRef}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="RealEstate_MunicipalityName">
-					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportExpression><![CDATA["titleNoCantonLogo.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{PrintCantonLogo} ? "titleAllLogos.jasper" : "titleNoCantonLogo.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</title>
