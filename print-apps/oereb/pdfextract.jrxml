@@ -117,6 +117,9 @@
 					<subreportParameter name="PLRCadastreAuthority_City">
 						<subreportParameterExpression><![CDATA[$P{PLRCadastreAuthority_City}]]></subreportParameterExpression>
 					</subreportParameter>
+					<subreportParameter name="PLRCadastreAuthority_OfficeAtWeb">
+						<subreportParameterExpression><![CDATA[$P{PLRCadastreAuthority_OfficeAtWeb}]]></subreportParameterExpression>
+					</subreportParameter>
 					<subreportParameter name="CreationDate">
 						<subreportParameterExpression><![CDATA[$P{CreationDate}]]></subreportParameterExpression>
 					</subreportParameter>

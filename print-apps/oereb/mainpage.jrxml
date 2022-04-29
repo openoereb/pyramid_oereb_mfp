@@ -21,6 +21,7 @@
 	<parameter name="PLRCadastreAuthority_Number" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
 	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
+	<parameter name="PLRCadastreAuthority_OfficeAtWeb" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
 	<parameter name="CreationDate" class="java.lang.String"/>
 	<parameter name="ExtractIdentifier" class="java.lang.String"/>
@@ -246,11 +247,11 @@
 				<box>
 					<bottomPen lineWidth="0.2"/>
 				</box>
-				<textElement verticalAlignment="Middle">
+				<textElement verticalAlignment="Middle" markup="html">
 					<font fontName="Cadastra" size="8" isBold="false"/>
 					<paragraph leftIndent="192"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{PLRCadastreAuthority_Name}+'\n'+$P{PLRCadastreAuthority_Street} +' '+$P{PLRCadastreAuthority_Number}+'\n'+$P{PLRCadastreAuthority_PostalCode}+' '+$P{PLRCadastreAuthority_City}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{PLRCadastreAuthority_Name}+"<br/>"+$P{PLRCadastreAuthority_Street} +' '+$P{PLRCadastreAuthority_Number}+"<br/>"+$P{PLRCadastreAuthority_PostalCode}+' '+$P{PLRCadastreAuthority_City}+"<br/>"+ "<a href="+$P{PLRCadastreAuthority_OfficeAtWeb} +" style=color:#4C8FBA>"+$P{PLRCadastreAuthority_OfficeAtWeb}+"</a>"]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="5593ce53-3995-4d63-8aaa-ed11b332a8a6">
