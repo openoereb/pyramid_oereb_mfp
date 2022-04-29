@@ -15,9 +15,9 @@
 	<field name="Title" class="java.lang.String"/>
 	<field name="Content" class="java.lang.String"/>
 	<detail>
-		<band height="17" splitType="Immediate">
+		<band height="17" splitType="Prevent">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement style="Default" x="0" y="0" width="493" height="17" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="bbc8f3dd-19b0-4440-aa6c-c04468e54bc2">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
