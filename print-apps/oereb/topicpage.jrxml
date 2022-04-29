@@ -169,10 +169,9 @@
 				<subreportExpression><![CDATA["topicTitle.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="317">
-			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+		<band height="310">
 			<textField>
-				<reportElement positionType="FixRelativeToBottom" x="220" y="307" width="58" height="10" uuid="c19cf5df-d1b3-4bee-8290-a175603a5eb7">
+				<reportElement positionType="FixRelativeToBottom" x="220" y="300" width="58" height="10" uuid="c19cf5df-d1b3-4bee-8290-a175603a5eb7">
 					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
@@ -182,7 +181,7 @@
 				<textFieldExpression><![CDATA[$R{Type}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement key="" positionType="FixRelativeToBottom" x="394" y="307" width="50" height="10" uuid="f31d1207-ead2-4e22-a928-5b06af28da74">
+				<reportElement key="" positionType="FixRelativeToBottom" x="394" y="300" width="50" height="10" uuid="f31d1207-ead2-4e22-a928-5b06af28da74">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
@@ -192,7 +191,7 @@
 				<textFieldExpression><![CDATA[$R{Share}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="FixRelativeToBottom" x="445" y="307" width="48" height="10" uuid="c75cc18b-c481-4a35-877e-1c17e88901b1">
+				<reportElement positionType="FixRelativeToBottom" x="445" y="300" width="48" height="10" uuid="c75cc18b-c481-4a35-877e-1c17e88901b1">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
