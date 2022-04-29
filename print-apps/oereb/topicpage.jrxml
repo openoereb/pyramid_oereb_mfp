@@ -95,7 +95,7 @@
 		<initialValueExpression><![CDATA[$V{PAGE_NUMBER}]]></initialValueExpression>
 	</variable>
 	<pageHeader>
-		<band height="55">
+		<band height="79">
 			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 			<subreport>
 				<reportElement stretchType="ContainerBottom" x="0" y="0" width="493" height="55" uuid="5593ce53-3995-4d63-8aaa-ed11b332a8a6">
@@ -146,16 +146,19 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="84">
+		<band height="56">
 			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 			<textField>
-				<reportElement x="0" y="45" width="492" height="20" uuid="60969764-be9a-421d-bdd8-9b46e410d1f8"/>
+				<reportElement x="0" y="0" width="492" height="20" uuid="60969764-be9a-421d-bdd8-9b46e410d1f8">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$P{TOC_Appendices}.put($F{Theme_Text}, new java.util.ArrayList()) instanceof String ? "" : ""]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement stretchType="ElementGroupHeight" x="0" y="28" width="493" height="34" uuid="941eabef-ea88-4f13-91c5-54fc7bccaf24">
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="493" height="34" uuid="941eabef-ea88-4f13-91c5-54fc7bccaf24">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<subreportParameter name="Lawstatus_Text">
 					<subreportParameterExpression><![CDATA[$F{Lawstatus_Text}]]></subreportParameterExpression>
