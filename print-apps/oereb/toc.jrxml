@@ -52,15 +52,6 @@
 	<parameter name="LogoPLRCadastre" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
 	<parameter name="PrintCantonLogo" class="java.lang.Boolean"/>
-	<parameter name="PLRCadastreAuthority_UID" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_Name" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_OfficeAtWeb" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_Line1" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_Line2" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_Street" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_Number" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_PostalCode" class="java.lang.String"/>
-	<parameter name="PLRCadastreAuthority_City" class="java.lang.String"/>
 	<parameter name="Signature" class="java.lang.String"/>
 	<parameter name="GeneralInformationDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="DisclaimerLandRegister_Title" class="java.lang.String"/>
