@@ -49,6 +49,7 @@
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
 	<parameter name="Display_Certification" class="java.lang.Boolean"/>
+	<parameter name="Display_QRCode" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_Type_Text" class="java.lang.String"/>
 	<parameter name="RealEstate_Canton" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
@@ -284,6 +285,9 @@
 					</subreportParameter>
 					<subreportParameter name="PrintCantonLogo">
 						<subreportParameterExpression><![CDATA[$P{PrintCantonLogo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="Display_QRCode">
+						<subreportParameterExpression><![CDATA[$P{Display_QRCode}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="QRCodeRef">
 						<subreportParameterExpression><![CDATA[$P{QRCodeRef}]]></subreportParameterExpression>
