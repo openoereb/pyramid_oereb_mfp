@@ -58,7 +58,7 @@
 		</band>
 	</detail>
 	<lastPageFooter>
-		<band height="67" splitType="Prevent">
+		<band height="67" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<printWhenExpression><![CDATA[$P{Display_QRCode}]]></printWhenExpression>
 			<textField>
