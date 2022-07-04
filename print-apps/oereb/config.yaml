@@ -69,6 +69,8 @@ templates:
             Display_RealEstate_SubunitOfLandRegister: !boolean
                 default: true
             Display_Certification: !boolean
+                default: false
+            Display_QRCode: !boolean
                 default: true
             RealEstate_MunicipalityCode: !string {}
             RealEstate_MetadataOfGeographicalBaseData: *optStr
