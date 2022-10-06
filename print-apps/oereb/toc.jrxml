@@ -249,7 +249,7 @@
 				<subreportExpression><![CDATA["themelist.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="38" splitType="Stretch">
+		<band height="38" splitType="Prevent">
 			<subreport>
 				<reportElement stretchType="ContainerHeight" isPrintRepeatedValues="false" x="252" y="0" width="240" height="20" isPrintInFirstWholeBand="true" uuid="547dff1a-158f-43e9-a578-cd61513d0e62">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -273,7 +273,7 @@
 				<subreportExpression><![CDATA["disclaimer_and_qrcode.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement stretchType="ContainerHeight" x="0" y="0" width="240" height="38" uuid="88178e0e-d18d-473b-8c4b-6548d2154fb1">
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="240" height="38" isPrintInFirstWholeBand="true" uuid="88178e0e-d18d-473b-8c4b-6548d2154fb1">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
