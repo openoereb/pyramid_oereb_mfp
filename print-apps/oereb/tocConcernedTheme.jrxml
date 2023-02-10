@@ -33,7 +33,7 @@
 				</reportElement>
 				<box topPadding="5" leftPadding="0" bottomPadding="4"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9" isBold="false"/>
+					<font fontName="Cadastra" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pageIndex} + $P{page_counter} +2]]></textFieldExpression>
@@ -50,7 +50,7 @@
 					<bottomPen lineWidth="0.2"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9" isBold="false"/>
+					<font fontName="Cadastra" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single" leftIndent="19"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{label}]]></textFieldExpression>
