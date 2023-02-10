@@ -15,7 +15,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{NoneGiven}]]></textFieldExpression>
 			</textField>
@@ -42,7 +42,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{LegendText}]]></textFieldExpression>
 			</textField>
