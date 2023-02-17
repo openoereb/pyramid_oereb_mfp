@@ -65,6 +65,7 @@
 	<parameter name="QRCodeRef" class="java.lang.String"/>
 	<parameter name="RealEstate_Number" class="java.lang.String"/>
 	<parameter name="RealEstate_EGRID" class="java.lang.String"/>
+        <parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="RealEstate_MunicipalityCode" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>

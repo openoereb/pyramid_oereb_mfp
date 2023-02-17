@@ -72,6 +72,7 @@
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
 	<parameter name="PrintCantonLogo" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_PlanForLandRegister" class="java.lang.String"/>
+        <parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="RealEstate_LandRegistryArea" class="java.lang.String"/>
 	<parameter name="northArrowSubReport" class="java.lang.String"/>
