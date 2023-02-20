@@ -6,7 +6,7 @@
 	<parameter name="FederalLogoRef" class="java.lang.String"/>
 	<parameter name="CantonalLogoRef" class="java.lang.String"/>
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
-        <parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
+	<parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
