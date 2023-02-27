@@ -45,6 +45,7 @@
 	<parameter name="QRCode" class="java.lang.String"/>
 	<parameter name="QRCodeRef" class="java.lang.String"/>
 	<parameter name="RealEstate_IdentDN" class="java.lang.String"/>
+        <parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="RealEstate_SubunitOfLandRegister" class="java.lang.String"/>
 	<parameter name="Display_RealEstate_SubunitOfLandRegister" class="java.lang.Boolean"/>
@@ -148,6 +149,9 @@
 					<subreportParameter name="RealEstate_MunicipalityName">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
+                                        <subreportParameter name="PrintMunicipalityName">
+                                                <subreportParameterExpression><![CDATA[$P{PrintMunicipalityName}]]></subreportParameterExpression>
+                                        </subreportParameter>
 					<subreportParameter name="RealEstate_SubunitOfLandRegister">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -232,6 +236,9 @@
 					<subreportParameter name="RealEstate_MunicipalityName">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
+                                        <subreportParameter name="PrintMunicipalityName">
+                                                <subreportParameterExpression><![CDATA[$P{PrintMunicipalityName}]]></subreportParameterExpression>
+                                        </subreportParameter>
 					<subreportParameter name="RealEstate_SubunitOfLandRegister">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_SubunitOfLandRegister}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -338,6 +345,9 @@
 					<subreportParameter name="RealEstate_MunicipalityName">
 						<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 					</subreportParameter>
+                                        <subreportParameter name="PrintMunicipalityName">
+                                                <subreportParameterExpression><![CDATA[$P{PrintMunicipalityName}]]></subreportParameterExpression>
+                                        </subreportParameter>
 					<subreportParameter name="GlossaryDataSource">
 						<subreportParameterExpression><![CDATA[$P{GlossaryDataSource}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -401,6 +411,9 @@
 				<subreportParameter name="RealEstate_MunicipalityName">
 					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
+                                        <subreportParameter name="PrintMunicipalityName">
+                                                <subreportParameterExpression><![CDATA[$P{PrintMunicipalityName}]]></subreportParameterExpression>
+                                        </subreportParameter>
 				<subreportParameter name="mapSubReport">
 					<subreportParameterExpression><![CDATA[$P{mapSubReport}]]></subreportParameterExpression>
 				</subreportParameter>

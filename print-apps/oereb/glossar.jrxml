@@ -17,6 +17,7 @@
 	<parameter name="MunicipalityLogoRef" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastre" class="java.lang.String"/>
 	<parameter name="LogoPLRCadastreRef" class="java.lang.String"/>
+	<parameter name="PrintMunicipalityName" class="java.lang.Boolean"/>
 	<parameter name="RealEstate_MunicipalityName" class="java.lang.String"/>
 	<parameter name="GlossaryDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<pageHeader>
@@ -41,6 +42,9 @@
 				</subreportParameter>
 				<subreportParameter name="RealEstate_MunicipalityName">
 					<subreportParameterExpression><![CDATA[$P{RealEstate_MunicipalityName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PrintMunicipalityName">
+					<subreportParameterExpression><![CDATA[$P{PrintMunicipalityName}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportExpression><![CDATA["titleAllLogos.jasper"]]></subreportExpression>
 			</subreport>
