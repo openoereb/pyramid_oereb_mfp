@@ -6,7 +6,7 @@ defaultToSvg: true
 templates:
     A4 portrait: !template
         reportTemplate: pdfextract.jrxml
-        outputFilename: ${yyyyMMddhhmmss}_extract
+        outputFilename: ${yyyyMMddHHmmss}_extract
         pdfA: true
         attributes:
             CreationDate: !string {}
