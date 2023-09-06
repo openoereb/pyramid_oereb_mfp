@@ -5,7 +5,7 @@ services:
   oereb-print:
     networks:
     - print-network
-    image: camptocamp/mapfish_print:3.30.2
+    image: camptocamp/mapfish_print:3.30.5
     environment:
       PRINT_YAML_MAX_ALIASES: 200
       LOG_LEVEL: INFO
