@@ -6,7 +6,7 @@ defaultToSvg: true
 templates:
     A4 portrait: !template
         reportTemplate: pdfextract.jrxml
-        outputFilename: ${yyyyMMddhhmmss}_extract
+        outputFilename: ${yyyyMMddHHmmss}_extract
         pdfA: true
         attributes:
             CreationDate: !string {}
@@ -64,6 +64,7 @@ templates:
                 default: None
             RealEstate_Type_Text: !string {}
             RealEstate_Canton: !string {}
+            PrintMunicipalityName: !boolean {}
             RealEstate_MunicipalityName: !string {}
             RealEstate_SubunitOfLandRegister: *optStr
             Display_RealEstate_SubunitOfLandRegister: !boolean

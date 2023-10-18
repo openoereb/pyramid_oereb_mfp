@@ -21,7 +21,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{NoneGiven}]]></textFieldExpression>
 			</textField>
@@ -32,7 +32,7 @@
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[!($F{LegendText} == null && $F{SymbolRef} == null)]]></printWhenExpression>
 			<image onErrorType="Blank">
-				<reportElement x="0" y="2" width="18" height="9" uuid="b9ef005c-0354-4c25-92dc-0121e89d814c">
+				<reportElement x="0" y="1" width="16" height="9" uuid="b9ef005c-0354-4c25-92dc-0121e89d814c">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
@@ -47,7 +47,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{LegendText}]]></textFieldExpression>
 			</textField>
@@ -58,7 +58,7 @@
 					<printWhenExpression><![CDATA["AreaShare".equals($F{Geom_Type})]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AreaShare}]]></textFieldExpression>
 			</textField>
@@ -69,7 +69,7 @@
 					<printWhenExpression><![CDATA["LengthShare".equals($F{Geom_Type})]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{LengthShare}]]></textFieldExpression>
 			</textField>
@@ -80,7 +80,7 @@
 					<printWhenExpression><![CDATA["NrOfPoints".equals($F{Geom_Type})]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NrOfPoints}]]></textFieldExpression>
 			</textField>
@@ -91,7 +91,7 @@
 					<printWhenExpression><![CDATA["AreaShare".equals($F{Geom_Type})]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Top">
-					<font fontName="Cadastra" size="9"/>
+					<font fontName="Cadastra" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{PartInPercent}]]></textFieldExpression>
 			</textField>
