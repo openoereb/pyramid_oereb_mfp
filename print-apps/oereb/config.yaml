@@ -229,12 +229,15 @@ templates:
             directory: '.'
         - !configureHttpRequests
             httpProcessors:
-            - !mapUri # NEEDED FOR DOCKER ENVIRONMENT
+            - !mapUri # NEEDED IN DOCKER ENVIRONMENT:
+                # A mapping is needed for the print service to retrieve the logos from your oereb server.
+                # Change as appropriate to be able to address your local oereb server from within a docker
+                # container, for example:
+                # - oereb-server if this is used as service name and it is running in the same docker composition,
+                # - 172.17.0.1 if running in a separate composition, but on the same host, 
+                # - a different host name if the oereb server is running elsewhere
                 mapping:
                   (https?)://localhost:6543/(.*): "http://oereb-server:6543/$2"
-            - !mapUri # NEEDED FOR DOCKER ENVIRONMENT (Oereblex port)
-                mapping:
-                  (https?)://localhost:6544/(.*): "http://oereb-server:6543/$2"
             - !forwardHeaders
                 headers:
                 - Referer
