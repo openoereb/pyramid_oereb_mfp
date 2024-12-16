@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TocReport main" pageWidth="595" pageHeight="842" columnWidth="493" leftMargin="51" rightMargin="51" topMargin="28" bottomMargin="20" whenResourceMissingType="Empty" uuid="6e74177b-d551-4a75-ae51-6cdde3f284ce">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -161,12 +161,12 @@
 				<textFieldExpression><![CDATA[$P{Display_RealEstate_SubunitOfLandRegister} && !$P{RealEstate_SubunitOfLandRegister}.equals("")? String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_MunicipalityName}, (", "+$P{RealEstate_SubunitOfLandRegister})) : String.format($R{Topicsaffectingtherealestate_ofthemunicipalityof_}, $P{RealEstate_Number}, $P{RealEstate_MunicipalityName},"")]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="29">
+		<band height="32">
 			<subreport>
-				<reportElement x="0" y="12" width="493" height="17" uuid="60322d8f-07db-4ad1-88ab-eb7d5329102e">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement x="0" y="12" width="493" height="20" uuid="60322d8f-07db-4ad1-88ab-eb7d5329102e">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<subreportParameter name="TOC_Appendices">
 					<subreportParameterExpression><![CDATA[$P{TOC_Appendices}]]></subreportParameterExpression>
@@ -195,7 +195,7 @@
 				<textFieldExpression><![CDATA[$P{ConcernedThemeDataSource} instanceof net.sf.jasperreports.engine.JREmptyDataSource ? $R{NoPLR} : $R{TOCPageLabel}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="61">
+		<band height="58">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField textAdjust="StretchHeight">
@@ -212,11 +212,11 @@
 				<textFieldExpression><![CDATA[$R{Topicsnotaffectingtherealestate}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement x="0" y="46" width="493" height="15" isPrintWhenDetailOverflows="true" uuid="285be929-4832-42d1-907e-8ad64f1ff057">
+				<reportElement x="0" y="46" width="493" height="12" isPrintWhenDetailOverflows="true" uuid="285be929-4832-42d1-907e-8ad64f1ff057">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<dataSourceExpression><![CDATA[$P{NotConcernedThemeDataSource}]]></dataSourceExpression>
 				<subreportExpression><![CDATA["themelist.jasper"]]></subreportExpression>
@@ -241,7 +241,7 @@
 				<textFieldExpression><![CDATA[$R{Topicswithoutdata}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="93" splitType="Prevent">
+		<band height="15" splitType="Prevent">
 			<subreport overflowType="Stretch">
 				<reportElement x="0" y="0" width="493" height="15" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="69f8d05f-fe14-473e-8c01-942aba0d9b54">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
@@ -253,9 +253,10 @@
 				<subreportExpression><![CDATA["themelist.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="38" splitType="Prevent">
+		<band height="64" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<subreport>
-				<reportElement stretchType="ContainerHeight" isPrintRepeatedValues="false" x="252" y="0" width="240" height="20" isPrintInFirstWholeBand="true" uuid="547dff1a-158f-43e9-a578-cd61513d0e62">
+				<reportElement stretchType="ContainerHeight" isPrintRepeatedValues="false" x="252" y="26" width="240" height="20" isPrintInFirstWholeBand="true" uuid="547dff1a-158f-43e9-a578-cd61513d0e62">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -277,9 +278,10 @@
 				<subreportExpression><![CDATA["disclaimer_and_qrcode.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement stretchType="ContainerHeight" x="0" y="0" width="240" height="38" isPrintInFirstWholeBand="true" uuid="88178e0e-d18d-473b-8c4b-6548d2154fb1">
+				<reportElement stretchType="ContainerHeight" x="0" y="26" width="240" height="38" isPrintInFirstWholeBand="true" uuid="88178e0e-d18d-473b-8c4b-6548d2154fb1">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<subreportParameter name="GeneralInformationLabel">
 					<subreportParameterExpression><![CDATA[$R{GeneralInformationLabel}]]></subreportParameterExpression>
