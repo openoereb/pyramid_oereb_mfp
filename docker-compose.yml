@@ -12,6 +12,7 @@ services:
       CATALINA_OPTS: >-
         -Xmx512M
         -Dmapfish.maxContentLength=4194304
+      JAVA_TOOL_OPTIONS: "-XX:-UseBASE64Intrinsics"
     volumes:
       - ./print-apps:/usr/local/tomcat/webapps/ROOT/print-apps:ro
     ports:
